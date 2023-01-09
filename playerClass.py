@@ -1,6 +1,7 @@
 from factions import factionsList ; from baseStats import playerBaseStats
 from changeRelation import changeFactionRelation, changeFactionRelationAll
 from changeStats import changePlayerStats ; from changeCurrencyAmount import addGold
+from classChange import changeClassStatus
 
 # Calls the fuction listing all of the factions so that it can be edited
 factionsList()
@@ -62,7 +63,10 @@ def playerClass():
             addGold(500)
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             changeFactionRelationAll('Neutral')
-            
+            # Sets the 'isClass' variable to true
+            changeClassStatus('Freelancer', True)
+            # Lets the user know that they have choosen the class
+            print("\nYou have choosen the Freelancer class.\n")
             # Handles if the user chooses the 'explorer' class
         elif playerClass.lower() == "explorer" or playerClass.lower() == 2:
             # Changes the starting money
@@ -71,6 +75,10 @@ def playerClass():
             changeFactionRelation('Lamia', 'Hostile') ; changeFactionRelation('Guild of Explorers', 'Friendly')
             # Changes the stats of the character
             changePlayerStats(stats, 'perception', 15)
+            # Sets the 'isClass' variable to true
+            changeClassStatus('Explorer', True)
+            # Lets the user know that they have choosen the class
+            print("\nYou have choosen the Explorer class.\n")
         # Handles if the user chooses the 'knight of the imperial high throne' class
         elif playerClass.lower() == "knight" or playerClass.lower() == 3:
             # Changes the starting gold
@@ -80,18 +88,30 @@ def playerClass():
             changeFactionRelation('Pirates', 'Hostile') ; changeFactionRelation('Thieves', 'Hostile')
             # Changes the stats of the character
             changePlayerStats(stats, 'attack', '60')
+            # Sets the 'isClass' variable to true
+            changeClassStatus('Knight', True)
+            # Lets the user know that they have choosen the class
+            print("\nYou have choosen the Knight class.\n")
         # Handles if the user chooses the 'sage' class
         elif playerClass.lower() == "Sage" or playerClass.lower() == 4:
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             changeFactionRelationAll('Ignored')
             # Changes the stats of the characters
             changePlayerStats(stats, 'mana', 200)
+            # Sets the 'isClass' variable to true
+            changeClassStatus('Sage', True)
+            # Lets the user know that they have choosen the class
+            print("You have choosen the Sage class.")
         # Handles if the user chooses the 'blind prophet' class
         elif playerClass.lower() == "Blind Prophet" or playerClass.lower() == 5:
             # Changes the relationship to the different factions, this will later affect what in game decisios can be made
             changeFactionRelationAll('Neutral')
             # Changes the stats of the character
             changePlayerStats(stats, 'ambushChance', 10)
+            # Sets the isClass variable to true
+            changeClassStatus('Blind Prophet', False)
+            # Lets the user know that they have choosen the class
+            print('You have choosen the Blind Prophet class.')
         # Handles if the user inputs something incorrectly
         else:
             print("It appears that you have inputed something wrong, please try again.")
