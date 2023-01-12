@@ -1,19 +1,37 @@
-"""List of factions, and your relations to them"""
-# Defines a list of factions, and the relations to them
-def factions_list():
-    """List of factions, and your relations to them"""
-    factions = [
-        {'name': 'Guild of Explorers', 'relation': 'Neutral'},
-        {'name': 'Lamia', 'relation': 'Neutral'},
-        {'name': 'High Imperial Army', 'relation': 'Neutral'},
-        {'name': 'Court of the High Moon', 'relation': 'Neutral'},
-        {'name': 'Pirates', 'relation': 'Neutral'},
-        {'name': 'Thieves', 'relation': 'Neutral'},
-        {'name': 'Elemental', 'relation': 'Neutral'},
-        {'name': 'Spirit', 'relation': 'Hostile'},
-        {'name': 'Orc', 'relation': 'Hostile'},
-        {'name': 'Beast', 'relation': 'Hostile'},
-        {'name': 'High Elves', 'relation': 'Friendly'},
-        {'name': 'Iron Stone Dwarfs', 'relation': 'Hostile'},
+class Faction:
+    def __init__(self, name, relation):
+        self.name = name
+        self.relation = relation
+
+    def change_relation(self, new_relation):
+        self.relation = new_relation
+
+class FactionsList:
+    def __init__(self):
+        self.factions = [
+            Faction('Guild of Explorers', 'Neutral'),
+            Faction('Lamia', 'Neutral'),
+            Faction('High Imperial Army', 'Neutral'),
+            Faction('Court of the High Moon', 'Neutral'),
+            Faction('Pirates', 'Neutral'),
+            Faction('Thieves', 'Neutral'),
+            Faction('Elemental', 'Neutral'),
+            Faction('Spirit', 'Hostile'),
+            Faction('Orc', 'Hostile'),
+            Faction('Beast', 'Hostile'),
+            Faction('High Elves', 'Friendly'),
+            Faction('Iron Stone Dwarfs', 'Hostile'),
         ]
-    return factions
+
+    def get_factions(self):
+        return self.factions
+
+    def find_faction(self,name):
+        for faction in self.factions:
+            if faction.name == name:
+                return faction
+    def change_faction_relation(self,name,new_relation):
+        faction = self.find_faction(name)
+        if faction:
+            faction.change_relation(new_relation)
+            return True

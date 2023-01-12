@@ -23,11 +23,9 @@ def tavern():
             """)
             my_inventory.add("Leather Bag", 1)
             inspect_workbench = input("As you look around you, you see an assortment of items on a workbench next to the boys bed. Would you like to inspect the workbench?")
-
         elif take_bag.lower() == "no":
             print("You decided to not take the bag, fair enough")
-        elif take_bag.lower() == "no":
-            print("""""")
+            inspect_workbench = input("As you look around you, you see an assortment of items on a workbench next to the boys bed. Would you like to inspect the workbench?")
     elif wake_up.lower() == "b":
         print("""Unable to overcome the exhaustion you fall back into slumber. You stray out of thought, and mind where each day is a life age of the earth.
                  Suddenly you are awoken by the small child. 'Wake up, wake up!', he cried. 'You must hurry, the master of the tavern requests to speak with you, although

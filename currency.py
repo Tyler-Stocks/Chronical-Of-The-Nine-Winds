@@ -1,9 +1,10 @@
-"""List of currencies in the game."""
-# Defines a list of currency
-def currency_list():
-    """Dictionary for all of the currencies"""
-    currency = [
-        {'name': 'Gold', 'amount': 0},
-        {'name': 'Aether', 'amount': 0},
-        ]
-    return currency
+"""This is interesting lol"""
+class Currency:
+    """Class representing a currency in the game"""
+    def __init__(self, name, amount):
+        """Initialize a new currency instance with a name and an amount"""
+        self.name = name
+        self.amount = amount
+    def add_amount(self, value):
+        """Add a value to the current amount of the currency"""
+        self.amount += value
