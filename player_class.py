@@ -1,9 +1,10 @@
 """Imports, and stuff"""
 from factions import factions_list
 from base_stats import player_base_stats
-from dictionaries_edit.change_relations import change_faction_relation, change_faction_relation_all
+from change_relations import change_faction_relation, change_faction_relation_all
 from change_stats import change_player_stats
 from class_change import change_class_status
+from change_currency import add_currency
 
 # Calls the fuction listing all of the factions so that it can be edited
 factions_list()
@@ -22,8 +23,8 @@ def player_class():
                 Starting Gold: 500
                 Favour: All: Neutral
             2. Explorer:
-                You were born to a guild of explorers. You have drifted from place to place all of you life, never staying in one place for long. As such your perceptions, and 
-                agility are much increased. Due to your assoiation with the guild, those of similar mindset will welcome you more easily. However, the guild has enemies, 
+                You were born to a guild of explorers. You have drifted from place to place all of you life, never staying in one place for long. As such your perceptions, and
+                agility are much increased. Due to your assoiation with the guild, those of similar mindset will welcome you more easily. However, the guild has enemies,
                 and should you find yourself in the hands of the Lamia, you will not be so fortunate as others. Finally, the guild gave you a small starting fund to aid you on your
                 expedition to unkown lands.
                 Starting Gold: 200
@@ -32,7 +33,7 @@ def player_class():
                 Relations: Guild of Explorers: Friendly
                 Favour: Lamia: Hostile
             3. Knight:
-                You were born in to a family of Imperial Knights. You underwent severe martial training from a very young age. As a consequence of this you have much more 
+                You were born in to a family of Imperial Knights. You underwent severe martial training from a very young age. As a consequence of this you have much more
                 strength, and stamina than the average person. However, due to your association with the crown those of criminal mind will despise you. Finally, you have managed to
                 save up your meager wage over the last 10 years to amount to a decent amount.
                 Starting Gold: 350
@@ -50,7 +51,7 @@ def player_class():
                 +500 magic
                 Relations: All: Ignored
             5. Blind Prophet:
-                You were born blind, unable to see the world around you, as such your other senses have been heightend to compensate. As a result of this your chance of being 
+                You were born blind, unable to see the world around you, as such your other senses have been heightend to compensate. As a result of this your chance of being
                 ambushed is greatly reduced. You were cast out of your home at a young age, and as such you have no money saved up.
                 -10 ambush chance.
                 Relations: All: Neutral
@@ -63,7 +64,7 @@ def player_class():
         # Handles if the user chooses the 'freelancer' class
         if player_class_choice.lower() == "freelancer" or player_class_choice.lower() == 1:
             # Changes the starting money
-            addGold(500)
+            add_currency('gold', 500)
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             change_faction_relation_all('Neutral')
             # Sets the 'isClass' variable to true
@@ -73,7 +74,7 @@ def player_class():
             # Handles if the user chooses the 'explorer' class
         elif player_class_choice.lower() == "explorer" or player_class_choice.lower() == 2:
             # Changes the starting money
-            addGold(200)
+            add_currency('gold', 200)
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             change_faction_relation('Lamia', 'Hostile')
             change_faction_relation('Guild of Explorers', 'Friendly')
@@ -86,9 +87,9 @@ def player_class():
         # Handles if the user chooses the 'knight of the imperial high throne' class
         elif player_class_choice.lower() == "knight" or player_class_choice.lower() == 3:
             # Changes the starting gold
-            addGold(350)
+            add_currency('gold', 350)
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
-            change_faction_relation('Hight Imperial Army', 'Friendly')
+            change_faction_relation('High Imperial Army', 'Friendly')
             change_faction_relation('Court of the High Moon', 'Friendly')
             change_faction_relation('Pirates', 'Hostile')
             change_faction_relation('Thieves', 'Hostile')
