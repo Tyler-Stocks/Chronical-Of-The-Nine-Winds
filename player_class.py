@@ -1,19 +1,16 @@
-"""Imports, and stuff"""
-from factions import factions_list
-from base_stats import player_base_stats
-from change_relations import change_faction_relation, change_faction_relation_all
-from change_stats import change_player_stats
-from class_change import change_class_status
-from change_currency import add_currency
+from factions import Faction, FactionsList
+from base_stats import Player
+from currency import Currency
 
-# Calls the fuction listing all of the factions so that it can be edited
-factions_list()
+# Creates an instance of the player
+player = Player()
+# Creates the currency for gold
+gold = Currency('gold', 0)
+# Creates an instance of all of the factions
+factions = FactionsList()
 
-# Calls the function listing all of the player base stats so that it can be edited
-stats = player_base_stats()
 
 def player_class():
-    """Classes and stuff."""
     # Prints out the different options for the player class
     print("""What class are you:
             1. Freelancer:
@@ -64,9 +61,9 @@ def player_class():
         # Handles if the user chooses the 'freelancer' class
         if player_class_choice.lower() == "freelancer" or player_class_choice.lower() == 1:
             # Changes the starting money
-            add_currency('gold', 500)
+            gold.add_amount(300)
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
-            change_faction_relation_all('Neutral')
+            factions.change_all_relations('Friendly')
             # Sets the 'isClass' variable to true
             change_class_status('Freelancer', True)
             # Lets the user know that they have choosen the class

@@ -1,21 +1,13 @@
-class Character:
-    """The base class for all characters in the game.
-
-    Attributes:
-        stats (list): A list of dictionaries containing the various stats for the character.
-    """
+# Class to serve as the template for any object with stats, such as the player character, or enemy.
+class Stats:
+    # Function to define an empty dictionary to be used in other classes, such as the one below.
     def __init__(self):
-        """Initializes the Character class and sets the stats attribute as an empty list."""
         self.stats = []
 
-class Player(Character):
-    """A class representing a player character in the game.
-
-    Inherits from the Character class and sets the initial stats for the player character.
-    """
+# Class for the player character.
+class Player(Stats):
+    # Function to define the players base stats
     def __init__(self):
-        """Initializes the Player class and sets the stats attribute using the data from the original function.
-        """
         super().__init__()
         self.stats = [
             {'health': 500, 'defense': 50}, # Defensive Stats
@@ -24,13 +16,8 @@ class Player(Character):
             {'mana': 100, 'intelligence': 100, 'arcane': 50, 'faith': 100}, # Casting Stats
             {'charisma': 50, 'perception': 10, 'ambushChance': 20, 'luck': 50} # General Stats
         ]
-
+    # Function to change the players base stats
     def change_stat(self, stat:str, value:int):
-        """Change the value of a stat of a player character.
-        Args:
-            stat (str): The name of the stat you want to change
-            value (int): The value you want to change the stat to
-        """
         for s in self.stats:
             if stat in s:
                 s[stat] = value

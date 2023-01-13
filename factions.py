@@ -30,8 +30,13 @@ class FactionsList:
         for faction in self.factions:
             if faction.name == name:
                 return faction
+
     def change_faction_relation(self,name,new_relation):
         faction = self.find_faction(name)
         if faction:
             faction.change_relation(new_relation)
             return True
+
+    def change_all_relations(self, new_relation):
+        for faction in self.factions:
+            faction.change_relation(new_relation)

@@ -1,12 +1,17 @@
-"""Stores class states"""
-# Defines a function that states whether or not the user is a certain class
-def is_class():
-    """Function to store whether they are the class"""
-    is_class_list = [
-        {'name' : 'Freelancer', 'isClass' : False},
-        {'name' : 'Explorer', 'isClass' : False},
-        {'name' : 'Knight' , 'isclass' : False},
-        {'name' : 'Sage', 'isClass' : False},
-        {'name' : 'Blind Prophet', 'isClass' : False},
-    ]
-    return is_class_list
+class Character():
+    def __init__(self, name, is_class=False):
+        self.name = name
+        self.is_class = is_class
+
+class_list = [
+    Character('Freelancer', False),
+    Character('Explorer', False),
+    Character('Knight', False),
+    Character('Sage', False),
+    Character('Blind Prophet', False)
+]
+
+def is_class(character_name):
+    for character in class_list:
+        if character.name == character_name:
+            return character.is_class

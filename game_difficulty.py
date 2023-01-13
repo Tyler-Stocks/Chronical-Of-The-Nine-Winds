@@ -1,10 +1,10 @@
-"""Function to confirm the basics"""
-def game_difficulty():
-    """Confirms the difficulty"""
-    # Asks user to confirm difficulty for the game
-    while True:
-        difficulty = input("Please select your difficulty level Easy or Hard: ")
-        difficulty_confirm = input("\nAre you sure?")
-        if difficulty_confirm.lower() == "yes" or difficulty_confirm.lower() == "y":
-            break
-    return difficulty
+class Game:
+    def __init__(self):
+        self.difficulty = None
+
+    def set_difficulty(self):
+        while True:
+            self.difficulty = input("Please select your difficulty level Easy or Hard: ")
+            difficulty_confirm = input("\nAre you sure?")
+            if difficulty_confirm.lower() == "yes" or difficulty_confirm.lower() == "y":
+                break
