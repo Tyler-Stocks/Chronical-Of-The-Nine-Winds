@@ -1,6 +1,6 @@
 # pylint: disable=line-too-long
-"""This has to be here lol"""
 from inventory import Inventory
+
 
 my_inventory = Inventory()
 def tavern():
@@ -33,4 +33,4 @@ def tavern():
         """)
         take_bag = str(input("Would you like to take the bag on your bedside table, as the boy suggests?"))
     else:
-        print("It appears that either I am not very good at programming, or you are not very good at following basic instructions.")
+        
