@@ -98,7 +98,7 @@ class PlayerClass:
             # Lets the user know that they have choosen the class
             print("You have choosen the Sage class.")
         # Handles if the user chooses the 'blind prophet' class
-        elif player_class_choice == 4:
+        elif player_class_choice == 5:
             # Changes the relationship to the different factions, this will later affect what in game decisios can be made
             factions.change_all_relations('Ignored')
             # Changes the stats of the character

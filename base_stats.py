@@ -10,11 +10,11 @@ class Player(Stats):
     def __init__(self):
         super().__init__()
         self.stats = [
-            {'health': 500, 'defense': 50}, # Defensive Stats
-            {'agility': 5, 'stealth': 10}, # Movement Stats
-            {'attack': 50, 'critStrength': 75, 'critChance': 0.1, 'stamina': 50}, # Offensive Stats
-            {'mana': 100, 'intelligence': 100, 'arcane': 50, 'faith': 100}, # Casting Stats
-            {'charisma': 50, 'perception': 10, 'ambushChance': 20, 'luck': 50} # General Stats
+            {'Health': 500, 'Defense': 50}, # Defensive Stats
+            {'Agility': 5, 'Stealth': 10}, # Movement Stats
+            {'Attack': 50, 'critStrength': 75, 'critChance': 0.1, 'Stamina': 50}, # Offensive Stats
+            {'Mana': 100, 'Intelligence': 100, 'Arcane': 50, 'Faith': 100}, # Casting Stats
+            {'Charisma': 50, 'Perception': 10, 'ambushChance': 20, 'Luck': 50} # General Stats
         ]
     # Function to change the players base stats
     def change_stat(self, stat:str, value:int):
