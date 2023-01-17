@@ -55,10 +55,10 @@ class PlayerClass:
     """)
 
         # Asks for the user input so that the progarm can know what class they are
-        player_class_choice = input("                ")
+        player_class_choice = int(input())
 
         # Handles if the user chooses the 'freelancer' class
-        if player_class_choice.lower() == "1":
+        if player_class_choice == 1:
             # Changes the starting money
             gold.add_amount(300)
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
@@ -66,7 +66,7 @@ class PlayerClass:
             # Lets the user know that they have choosen the class
             print("\nYou have choosen the Freelancer class.\n")
             # Handles if the user chooses the 'explorer' class
-        elif player_class_choice.lower() == "2":
+        elif player_class_choice == 2:
             # Changes the starting money
             gold.add_amount(200)
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
@@ -77,7 +77,7 @@ class PlayerClass:
             # Lets the user know that they have choosen the class
             print("\nYou have choosen the Explorer class.\n")
         # Handles if the user chooses the 'knight of the imperial high throne' class
-        elif player_class_choice.lower() == "3":
+        elif player_class_choice == 3:
             # Changes the starting gold
             gold.add_amount(500)
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
@@ -90,7 +90,7 @@ class PlayerClass:
             # Lets the user know that they have choosen the class
             print("\nYou have choosen the Knight class.\n")
         # Handles if the user chooses the 'sage' class
-        elif player_class_choice.lower() == "4":
+        elif player_class_choice == 4:
             # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             factions.change_all_relations('Ignored')
             # Changes the stats of the characters
@@ -98,7 +98,7 @@ class PlayerClass:
             # Lets the user know that they have choosen the class
             print("You have choosen the Sage class.")
         # Handles if the user chooses the 'blind prophet' class
-        elif player_class_choice.lower() == "4":
+        elif player_class_choice == 4:
             # Changes the relationship to the different factions, this will later affect what in game decisios can be made
             factions.change_all_relations('Ignored')
             # Changes the stats of the character
