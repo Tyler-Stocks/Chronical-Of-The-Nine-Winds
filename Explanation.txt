@@ -1,0 +1,21 @@
+    Hello, you may have noticed something odd in my program, there are no comments at all. I do have a reason for this, and hopefully you will come to understand by the end
+of this short documentation. Comments are ususally denoted with a # or / or * or <!-- or something similar. There function is to explain code, to make it more user Friendly
+However, I have a few problems with this. If your code is so unreadable that you need to put comments in your code, you should probably refactor your code to be more
+intuitive. Another common usecase for comments that you will see is for explaining functions or classes in programming. This is a fair argument however there are better
+ways around it. If people are having a difficult time understanding what a class is doing, here are some steps you can follow to avoid the use of comments.
+    1. Have more descriptive names for variables
+       Instead of naming your variables numOne, and numTwo or userInput or other non descriptive names, use real names for what they represent. This will avoid confusion,
+       and remove the need for comments explaining variable names.
+    2. Have more descriptive names for functions
+       Don't just give your functions arbituary names like run, or main, or call. Give them names that actually have meaning. A good rule of thumb that I have found is to
+       name your function based of what their function is.
+    3. Refactor your code to be more human readable
+       This means to use syntax that is eaiser to read by humans, I would always opt for anything that uses 'and', 'if', 'or', 'not', or 'nor', instead of &, !, and so on
+       The only exceptions to this rule are if you are using languages like x86, or C where 'and', 'AND', and '&' all mean different things.
+USE CASES FOR COMMENTS
+    Despite all of this there are some use cases for comments. The following are some times that you should use comments.
+    1. If you code is heavily mathimatical in it's syntax. Say you are writing a machine learning model or something that is basically statistics on steroids.
+    2. You could write comments to explain how to use a program, not to explain it.
+
+Finally, keep in mind these rules only apply to solo projects. If you are collaberating don't be a dick, just put comments in your code, especially if you are changing
+someone elses work.

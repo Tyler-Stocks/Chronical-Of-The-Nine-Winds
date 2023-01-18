@@ -2,16 +2,12 @@ from factions import FactionsList
 from base_stats import Player
 from currency import Currency
 
-# Creates an instance of the player
 player = Player()
-# Creates the currency for gold
 gold = Currency('gold', 0)
-# Creates an instance of all of the factions
 factions = FactionsList()
 
 class PlayerClass:
     def player_class(self):
-        # Prints out the different options for the player class
         print("""What class are you:
             1. Freelancer:
                 You were born into a completely average family, growing up in an ordinary job, and thus having no special experience. As a consequence of you completely mediocre
@@ -54,57 +50,33 @@ class PlayerClass:
                 Relations: All: Neutral
     """)
 
-        # Asks for the user input so that the progarm can know what class they are
         player_class_choice = int(input())
 
-        # Handles if the user chooses the 'freelancer' class
         if player_class_choice == 1:
-            # Changes the starting money
             gold.add_amount(300)
-            # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             factions.change_all_relations('Friendly')
-            # Lets the user know that they have choosen the class
             print("\nYou have choosen the Freelancer class.\n")
-            # Handles if the user chooses the 'explorer' class
         elif player_class_choice == 2:
-            # Changes the starting money
             gold.add_amount(200)
-            # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             factions.change_faction_relation('Lamia', 'Hostile')
             factions.change_faction_relation('Guild of Explorers', 'Friendly')
-            # Changes the stats of the character
             player.change_stat('Perception', 15)
-            # Lets the user know that they have choosen the class
             print("\nYou have choosen the Explorer class.\n")
-        # Handles if the user chooses the 'knight of the imperial high throne' class
         elif player_class_choice == 3:
-            # Changes the starting gold
             gold.add_amount(500)
-            # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             factions.change_faction_relation('High Imperial Army', 'Friendly')
             factions.change_faction_relation('Court of the Hight Moon', 'Friendly')
             factions.change_faction_relation('Pirates', 'Hostile')
             factions.change_faction_relation('Thieves', 'Hostile')
-            # Changes the stats of the character
             player.change_stat('Strength', 50)
-            # Lets the user know that they have choosen the class
             print("\nYou have choosen the Knight class.\n")
-        # Handles if the user chooses the 'sage' class
         elif player_class_choice == 4:
-            # Changes the relationship to the different factions, this will later affect what in game decisions can be made
             factions.change_all_relations('Ignored')
-            # Changes the stats of the characters
             player.change_stat('Magic', 500)
-            # Lets the user know that they have choosen the class
             print("You have choosen the Sage class.")
-        # Handles if the user chooses the 'blind prophet' class
         elif player_class_choice == 5:
-            # Changes the relationship to the different factions, this will later affect what in game decisios can be made
             factions.change_all_relations('Ignored')
-            # Changes the stats of the character
             player.change_stat('Ambush Chance', 20)
-            # Sets the isClass variable to true
             print('You have choosen the Blind Prophet class.')
-        # Handles if the user inputs something incorrectly
         else:
             print("It appears that you have inputed something wrong, please try again.")
