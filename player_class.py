@@ -77,6 +77,6 @@ class PlayerClass:
         elif player_class_choice == 5:
             factions.change_all_relations('Ignored')
             player.change_stat('Ambush Chance', 20)
-            print('You have choosen the Blind Prophet class.')
+            print('\nYou have choosen the Blind Prophet class.\n')
         else:
-            print("It appears that you have inputed something wrong, please try again.")
+            print("\nIt appears that you have inputed something wrong, please try again.\n")

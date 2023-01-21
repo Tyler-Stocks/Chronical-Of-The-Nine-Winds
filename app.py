@@ -1,4 +1,4 @@
-from early_game import EarlyGame
+from pre_game import EarlyGame
 
 earlyGame = EarlyGame()
 
