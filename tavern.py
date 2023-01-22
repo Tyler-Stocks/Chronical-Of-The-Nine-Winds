@@ -63,9 +63,91 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("It appears that there is a rotting piece of wood on the table")
                                         take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood, perhaps you can find some use for it.")
+                                            work_bench_choice_four = str(input("Would you like to open the leather book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
+                                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                                if open_arcane_journal.lower() == "yes":
+                                                    print("You decided to look in the journal, after flipping through the faded pages you manage to make out the following passage:")
+                                                    print("""I have just finally been accepted into the brotherhood! It has been three months since I sent my application, I was starting to worry
+                                                    that I wouldn't get in. I am leaving tomorrow for the high imperial court. I can't wait to finally see the city, I heard the
+                                                    capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
+                                                    """)
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                elif open_arcane_journal.lower() == "no":
+                                                    print("You decided not to open the journal, fair enough.")
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                else:
+                                                    print(error)
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the book, good to keep others privacy right?")
+                                                print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        elif take_rotting_wood.lower() == "no":
+                                            print("You decided not to take the wood, fair enough.")
+                                            work_bench_choice_four = str(input("Would you like to open the leather book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
+                                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                                if open_arcane_journal.lower() == "yes":
+                                                    print("You decided to look in the journal, after flipping through the faded pages you manage to make out the following passage:")
+                                                    print("""I have just finally been accepted into the brotherhood! It has been three months since I sent my application, I was starting to worry
+                                                    that I wouldn't get in. I am leaving tomorrow for the high imperial court. I can't wait to finally see the city, I heard the
+                                                    capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
+                                                    """)
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                elif open_arcane_journal.lower() == "no":
+                                                    print("You decided not to open the journal, fair enough.")
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                else:
+                                                    print(error)
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the book, good to keep others privacy right?")
+                                                print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     elif work_bench_choice_three.lower() == "b":
                                         print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You decided to open the journal, you didn't see anything inside, despite this you still take it.")
+                                            work_bench_choice_four = str(input("Would you like to take the piece of rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps you can use it for somehting")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif open_arcane_journal.lower() == "no":
+                                            print("You decided not to take the book, good to keep privacy right?")
+                                            work_bench_choice_four = str(input("Would you like to take the piece of rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps you can find some use for it.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     else:
                                         print(error)
                                 elif take_rusted_bell.lower() == "no":
@@ -77,48 +159,102 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("It appears that there is a rotting piece of wood on the table")
                                         take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood, perhaps you can find some use for it.")
+                                            work_bench_choice_four = str(input("Would you like to open the leather book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
+                                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                                if open_arcane_journal.lower() == "yes":
+                                                    print("You decided to look in the journal, after flipping through the faded pages you manage to make out the following passage:")
+                                                    print("""I have just finally been accepted into the brotherhood! It has been three months since I sent my application, I was starting to worry
+                                                    that I wouldn't get in. I am leaving tomorrow for the high imperial court. I can't wait to finally see the city, I heard the
+                                                    capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
+                                                    """)
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                elif open_arcane_journal.lower() == "no":
+                                                    print("You decided not to open the journal, fair enough.")
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                else:
+                                                    print(error)
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the book, good to keep others privacy right?")
+                                                print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        elif take_rotting_wood.lower() == "no":
+                                            print("You decided not to take the wood, fair enough.")
+                                            work_bench_choice_four = str(input("Would you like to open the leather book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
+                                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                                if open_arcane_journal.lower() == "yes":
+                                                    print("You decided to look in the journal, after flipping through the faded pages you manage to make out the following passage:")
+                                                    print("""I have just finally been accepted into the brotherhood! It has been three months since I sent my application, I was starting to worry
+                                                    that I wouldn't get in. I am leaving tomorrow for the high imperial court. I can't wait to finally see the city, I heard the
+                                                    capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
+                                                    """)
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                elif open_arcane_journal.lower() == "no":
+                                                    print("You decided not to open the journal, fair enough.")
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                else:
+                                                    print(error)
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the book, good to keep others privacy right?")
+                                                print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     elif work_bench_choice_three.lower() == "b":
                                         print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
-                                    else:
-                                        print(error)
-                                else:
-                                    print(error)
-                            elif work_bench_choice_two.lower() == "b":
-                                print("It appears that there is a rotting piece of wood on the table")
-                                take_rotting_wood = str(input("Would you like to take the rotting wood? "))
-                                if take_rotting_wood.lower() == "yes":
-                                    print("You decided to take the rotting wood, I'm sure there is some use for it.")
-                                    my_inventory.add("Rotting Wood", 1)
-                                    work_bench_choice_three = str(input("""Would you like to:
-                                                                           A: Examine the bell
-                                                                           B: Open the leather book
-                                                                  """))
-                                    if work_bench_choice_three.lower() == "a":
-                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
-                                        take_rusted_bell = str(input("Would you like to take the bell? "))
-                                    elif work_bench_choice_three.lower() == "b":
-                                        print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
-                                        open_arcane_journal = str(input("Would you like to open the journal."))
-                                elif take_rotting_wood.lower() == "no":
-                                    print("You decided to not take the rotting wood, fair enough")
-                                    work_bench_choice_three = str(input("""Would you like to:
-                                                                           A: Examine the bell
-                                                                           B: Open the leather book
-                                                                  """))
-                                    if work_bench_choice_three.lower() == "a":
-                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
-                                        take_rusted_bell = str(input("Would you like to take the bell? "))
-                                    elif work_bench_choice_three.lower() == "b":
-                                        print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
-                                        open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You decided to open the journal, you didn't see anything inside, despite this you still take it.")
+                                            work_bench_choice_four = str(input("Would you like to take the piece of rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps you can use it for somehting")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif open_arcane_journal.lower() == "no":
+                                            print("You decided not to take the book, good to keep privacy right?")
+                                            work_bench_choice_four = str(input("Would you like to take the piece of rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps you can find some use for it.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     else:
                                         print(error)
                                 else:
                                     print(error)
                             elif work_bench_choice_two.lower() == "c":
                                 print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
-                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                open_arcane_journal_3 = str(input("Would you like to open the journal."))
+                                if open_arcane_journal_3 == "a":
+                                    print("Suddenly, you died.")
+                                else:
+                                    print("You died suddenly.")
                             else:
                                 print(error)
                         elif take_faded_map.lower() == "no":
@@ -141,9 +277,91 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("It appears that there is a rotting piece of wood on the table")
                                         take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood, perhaps you can find some use for it.")
+                                            work_bench_choice_four = str(input("Would you like to open the leather book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
+                                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                                if open_arcane_journal.lower() == "yes":
+                                                    print("You decided to look in the journal, after flipping through the faded pages you manage to make out the following passage:")
+                                                    print("""I have just finally been accepted into the brotherhood! It has been three months since I sent my application, I was starting to worry
+                                                    that I wouldn't get in. I am leaving tomorrow for the high imperial court. I can't wait to finally see the city, I heard the
+                                                    capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
+                                                    """)
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                elif open_arcane_journal.lower() == "no":
+                                                    print("You decided not to open the journal, fair enough.")
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                else:
+                                                    print(error)
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the book, good to keep others privacy right?")
+                                                print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        elif take_rotting_wood.lower() == "no":
+                                            print("You decided not to take the wood, fair enough.")
+                                            work_bench_choice_four = str(input("Would you like to open the leather book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
+                                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                                if open_arcane_journal.lower() == "yes":
+                                                    print("You decided to look in the journal, after flipping through the faded pages you manage to make out the following passage:")
+                                                    print("""I have just finally been accepted into the brotherhood! It has been three months since I sent my application, I was starting to worry
+                                                    that I wouldn't get in. I am leaving tomorrow for the high imperial court. I can't wait to finally see the city, I heard the
+                                                    capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
+                                                    """)
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                elif open_arcane_journal.lower() == "no":
+                                                    print("You decided not to open the journal, fair enough.")
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                else:
+                                                    print(error)
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the book, good to keep others privacy right?")
+                                                print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     elif work_bench_choice_three.lower() == "b":
                                         print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You decided to open the journal, you didn't see anything inside, despite this you still take it.")
+                                            work_bench_choice_four = str(input("Would you like to take the piece of rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps you can use it for somehting")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif open_arcane_journal.lower() == "no":
+                                            print("You decided not to take the book, good to keep privacy right?")
+                                            work_bench_choice_four = str(input("Would you like to take the piece of rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps you can find some use for it.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     else:
                                         print(error)
                                 elif take_rusted_bell.lower() == "no":
@@ -155,48 +373,102 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("It appears that there is a rotting piece of wood on the table")
                                         take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood, perhaps you can find some use for it.")
+                                            work_bench_choice_four = str(input("Would you like to open the leather book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
+                                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                                if open_arcane_journal.lower() == "yes":
+                                                    print("You decided to look in the journal, after flipping through the faded pages you manage to make out the following passage:")
+                                                    print("""I have just finally been accepted into the brotherhood! It has been three months since I sent my application, I was starting to worry
+                                                    that I wouldn't get in. I am leaving tomorrow for the high imperial court. I can't wait to finally see the city, I heard the
+                                                    capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
+                                                    """)
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                elif open_arcane_journal.lower() == "no":
+                                                    print("You decided not to open the journal, fair enough.")
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                else:
+                                                    print(error)
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the book, good to keep others privacy right?")
+                                                print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        elif take_rotting_wood.lower() == "no":
+                                            print("You decided not to take the wood, fair enough.")
+                                            work_bench_choice_four = str(input("Would you like to open the leather book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
+                                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                                if open_arcane_journal.lower() == "yes":
+                                                    print("You decided to look in the journal, after flipping through the faded pages you manage to make out the following passage:")
+                                                    print("""I have just finally been accepted into the brotherhood! It has been three months since I sent my application, I was starting to worry
+                                                    that I wouldn't get in. I am leaving tomorrow for the high imperial court. I can't wait to finally see the city, I heard the
+                                                    capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
+                                                    """)
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                elif open_arcane_journal.lower() == "no":
+                                                    print("You decided not to open the journal, fair enough.")
+                                                    print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                    go_downstairs = str(input("Would you like to go downstairs"))
+                                                else:
+                                                    print(error)
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the book, good to keep others privacy right?")
+                                                print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     elif work_bench_choice_three.lower() == "b":
                                         print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
-                                    else:
-                                        print(error)
-                                else:
-                                    print(error)
-                            elif work_bench_choice_two.lower() == "b":
-                                print("It appears that there is a rotting piece of wood on the table")
-                                take_rotting_wood = str(input("Would you like to take the rotting wood? "))
-                                if take_rotting_wood.lower() == "yes":
-                                    print("You decided to take the rotting wood, I'm sure there is some use for it.")
-                                    my_inventory.add("Rotting Wood", 1)
-                                    work_bench_choice_three = str(input("""Would you like to:
-                                                                           A: Examine the bell
-                                                                           B: Open the leather book
-                                                                  """))
-                                    if work_bench_choice_three.lower() == "a":
-                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
-                                        take_rusted_bell = str(input("Would you like to take the bell? "))
-                                    elif work_bench_choice_three.lower() == "b":
-                                        print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
-                                        open_arcane_journal = str(input("Would you like to open the journal."))
-                                elif take_rotting_wood.lower() == "no":
-                                    print("You decided to not take the rotting wood, fair enough")
-                                    work_bench_choice_three = str(input("""Would you like to:
-                                                                           A: Examine the bell
-                                                                           B: Open the leather book
-                                                                  """))
-                                    if work_bench_choice_three.lower() == "a":
-                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
-                                        take_rusted_bell = str(input("Would you like to take the bell? "))
-                                    elif work_bench_choice_three.lower() == "b":
-                                        print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
-                                        open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You decided to open the journal, you didn't see anything inside, despite this you still take it.")
+                                            work_bench_choice_four = str(input("Would you like to take the piece of rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps you can use it for somehting")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif open_arcane_journal.lower() == "no":
+                                            print("You decided not to take the book, good to keep privacy right?")
+                                            work_bench_choice_four = str(input("Would you like to take the piece of rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps you can find some use for it.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that there is not other options but to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     else:
                                         print(error)
                                 else:
                                     print(error)
                             elif work_bench_choice_two.lower() == "c":
                                 print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
-                                open_arcane_journal = str(input("Would you like to open the journal."))
+                                open_arcane_journal_3 = str(input("Would you like to open the journal."))
+                                if open_arcane_journal_3 == "a":
+                                    print("Suddenly, you died.")
+                                else:
+                                    print("You died suddenly.")
                             else:
                                 print(error)
                         else:
