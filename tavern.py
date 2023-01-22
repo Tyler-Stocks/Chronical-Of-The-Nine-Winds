@@ -684,12 +684,28 @@ class Tavern():
                                                                            A: Examine the bell
                                                                            B: Examine the rotting piece of wood
                                                                         """))
-                                elif take_faded_map.lower() == "b":
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
+                                        take_rusted_bell = str(input("Would you like to take the bell? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("It appears that there is a rotting piece of wood on the table")
+                                        take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                    else:
+                                        print(error)
+                                elif take_faded_map.lower() == "no":
                                     print("You decided not to take the map, I'm sure it is fine anyways.")
                                     work_bench_choice_three = str(input("""Would you like to:
                                                                            A: Examine the bell
                                                                            B: Examine the rotting piece of wood
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
+                                        take_rusted_bell = str(input("Would you like to take the bell? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("It appears that there is a rotting piece of wood on the table")
+                                        take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                    else:
+                                        print(error)
                                 else:
                                     print(error)
                             elif work_bench_choice_two.lower() == "b":
@@ -702,12 +718,28 @@ class Tavern():
                                                                            A: Examine the map
                                                                            B: Examine the rotting piece of wood
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the map, it is too faded to dechiper. If only you had the right tools...")
+                                        take_faded_map = str(input("Would you like to take the map? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("It appears that there is a rotting piece of wood on the table")
+                                        take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                    else:
+                                        print(error)
                                 elif take_rusted_bell.lower() == "no":
                                     print("You decided not to take the bell, it is broken after all.")
                                     work_bench_choice_three = str(input("""Would you like to:
                                                                            A: Examine the map
                                                                            B: Examine the rotting piece of wood
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the map, it is too faded to dechiper. If only you had the right tools...")
+                                        take_faded_map = str(input("Would you like to take the map? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("It appears that there is a rotting piece of wood on the table")
+                                        take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                    else:
+                                        print(error)
                                 else:
                                     print(error)
                             elif work_bench_choice_two.lower() == "c":
@@ -720,6 +752,12 @@ class Tavern():
                                                                            A: Examine the map
                                                                            B: Examine the bell
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the map, it is too faded to dechiper. If only you had the right tools...")
+                                        take_faded_map = str(input("Would you like to take the map? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
+                                        take_rusted_bell = str(input("Would you like to take the bell? "))
                                 elif take_rotting_wood.lower() == "no":
                                     print("You decided not to take the wood, what use could you possibly have for it.")
                                     work_bench_choice_three = str(input("""Would you like to
@@ -747,12 +785,28 @@ class Tavern():
                                                                            A: Examine the bell
                                                                            B: Examine th rotting piece of wood
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
+                                        take_rusted_bell = str(input("Would you like to take the bell? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("It appears that there is a rotting piece of wood on the table")
+                                        take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                    else:
+                                        print(error)
                                 elif take_faded_map.lower() == "no":
                                     print("You decided not to take the map, fair enough.")
                                     work_bench_choice_three = str(input("""Would you like to:
                                                                            A: Examine the bell
                                                                            B: Examine th rotting piece of wood
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
+                                        take_rusted_bell = str(input("Would you like to take the bell? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("It appears that there is a rotting piece of wood on the table")
+                                        take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                    else:
+                                        print(error)
                                 else:
                                     print(error)
                             elif work_bench_choice_two.lower() == "b":
@@ -765,12 +819,28 @@ class Tavern():
                                                                            A: Examine the map
                                                                            B: Examine the rotting piece of wood
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the map, it is too faded to dechiper. If only you had the right tools...")
+                                        take_faded_map = str(input("Would you like to take the map? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("It appears that there is a rotting piece of wood on the table")
+                                        take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                    else:
+                                        print(error)
                                 elif take_rusted_bell.lower() == "no":
                                     print("You decided not to take the bell, fair enough.")
                                     work_bench_choice_three = str(input("""Would you like to:
                                                                            A: Examine the map
                                                                            B: Examine the rotting piece of wood
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the map, it is too faded to dechiper. If only you had the right tools...")
+                                        take_faded_map = str(input("Would you like to take the map? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("It appears that there is a rotting piece of wood on the table")
+                                        take_rotting_wood = str(input("Would you like to take the rotting wood? "))
+                                    else:
+                                        print(error)
                                 else:
                                     print(error)
                             elif work_bench_choice_two.lower() == "c":
@@ -783,12 +853,28 @@ class Tavern():
                                                                            A: Examine the map
                                                                            B: Examine the bell
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the map, it is too faded to dechiper. If only you had the right tools...")
+                                        take_faded_map = str(input("Would you like to take the map? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
+                                        take_rusted_bell = str(input("Would you like to take the bell? "))
+                                    else:
+                                        print(error)
                                 elif take_rotting_wood.lower() == "no":
                                     print("You decided not to take the wood, what use could you possibly have for it.")
                                     work_bench_choice_three = str(input("""Would you like to
                                                                            A: Examine the map
                                                                            B: Examine the bell
                                                                         """))
+                                    if work_bench_choice_three.lower() == "a":
+                                        print("You decided to inspect the map, it is too faded to dechiper. If only you had the right tools...")
+                                        take_faded_map = str(input("Would you like to take the map? "))
+                                    elif work_bench_choice_three.lower() == "b":
+                                        print("You decided to inspect the bell, there appears to be a hole rusted through the side so it probably will not work.")
+                                        take_rusted_bell = str(input("Would you like to take the bell? "))
+                                    else:
+                                        print(error)
                                 else:
                                     print(error)
                             else:
