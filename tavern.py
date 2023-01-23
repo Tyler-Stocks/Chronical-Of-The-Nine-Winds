@@ -1,14 +1,16 @@
 # pylint: disable=line-too-long
 # pylance: disable=too-complex
 from inventory import Inventory
+from combat import combat_loop, Player, Enemy
 
-
+player = Player('Player1', 100)
+enemy = Enemy('Tavern Master', 50)
 my_inventory = Inventory()
 
 error = "\nIt appears something has gone wrong\n"
 
 class Tavern():
-    def tavern(self):
+    def tavern(self): # type: ignore 
         print("""You wake up in a small dimly lit room. To your right there is a small boy, he appears to be sleeping peacfully. To your left there is a door, it appears to be
              broken, and worn out.
             """)
@@ -79,16 +81,46 @@ class Tavern():
                                                     """)
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 elif open_arcane_journal.lower() == "no":
                                                     print("You decided not to open the journal, fair enough.")
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 else:
                                                     print(error)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the book, good to keep others privacy right?")
                                                 print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -105,16 +137,46 @@ class Tavern():
                                                     """)
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 elif open_arcane_journal.lower() == "no":
                                                     print("You decided not to open the journal, fair enough.")
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 else:
                                                     print(error)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the book, good to keep others privacy right?")
                                                 print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -129,10 +191,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps you can use it for somehting")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -146,6 +228,16 @@ class Tavern():
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -175,16 +267,46 @@ class Tavern():
                                                     """)
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 elif open_arcane_journal.lower() == "no":
                                                     print("You decided not to open the journal, fair enough.")
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 else:
                                                     print(error)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the book, good to keep others privacy right?")
                                                 print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -201,16 +323,46 @@ class Tavern():
                                                     """)
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 elif open_arcane_journal.lower() == "no":
                                                     print("You decided not to open the journal, fair enough.")
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 else:
                                                     print(error)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the book, good to keep others privacy right?")
                                                 print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -225,10 +377,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps you can use it for somehting")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -238,10 +410,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps you can find some use for it.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -293,16 +485,46 @@ class Tavern():
                                                     """)
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 elif open_arcane_journal.lower() == "no":
                                                     print("You decided not to open the journal, fair enough.")
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 else:
                                                     print(error)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the book, good to keep others privacy right?")
                                                 print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -319,16 +541,46 @@ class Tavern():
                                                     """)
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 elif open_arcane_journal.lower() == "no":
                                                     print("You decided not to open the journal, fair enough.")
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 else:
                                                     print(error)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the book, good to keep others privacy right?")
                                                 print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -343,10 +595,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps you can use it for somehting")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -356,10 +628,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps you can find some use for it.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -389,16 +681,46 @@ class Tavern():
                                                     """)
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 elif open_arcane_journal.lower() == "no":
                                                     print("You decided not to open the journal, fair enough.")
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 else:
                                                     print(error)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the book, good to keep others privacy right?")
                                                 print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -415,16 +737,46 @@ class Tavern():
                                                     """)
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 elif open_arcane_journal.lower() == "no":
                                                     print("You decided not to open the journal, fair enough.")
                                                     print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                     go_downstairs = str(input("Would you like to go downstairs"))
+                                                    if go_downstairs.lower() == "yes":
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
+                                                    else:
+                                                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                        print('"..."')
+                                                        print("BATTLE START")
+                                                        combat_loop(player, enemy)
                                                 else:
                                                     print(error)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the book, good to keep others privacy right?")
                                                 print("You have now gone through everything on the desk, after looking around your only real option is to go downstairs")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -439,10 +791,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps you can use it for somehting")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -452,10 +824,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps you can find some use for it.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that there is not other options but to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -506,10 +898,30 @@ class Tavern():
                                                 print("You decided to open the book, unfortunatly there is nothing inside.")
                                                 print("It appears now that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book, fair enough.")
                                                 print("It appears now that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -522,10 +934,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps it will be usefull.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     else:
@@ -546,10 +978,30 @@ class Tavern():
                                                 print("You decided to open the book, unfortunatly there is nothing inside.")
                                                 print("It appears now that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book, fair enough.")
                                                 print("It appears now that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -562,10 +1014,30 @@ class Tavern():
                                                 print("You decided to take the wood, perhaps it will be usefull.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     else:
@@ -592,10 +1064,30 @@ class Tavern():
                                                 print("You decided to take the journal, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif open_arcane_journal.lower() == "no":
                                                 print("You decided not to take the journal, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -605,10 +1097,30 @@ class Tavern():
                                                 print("You decided to take the journal, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif open_arcane_journal.lower() == "no":
                                                 print("You decided not to take the journal, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -621,10 +1133,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the map, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() ==  "no":
@@ -634,10 +1166,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the map, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     else:
@@ -658,10 +1210,30 @@ class Tavern():
                                                 print("You decided to open the journal, unfortunatly there is nothing inside.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif open_arcane_journal.lower() == "no":
                                                 print("You decided not to open the journal, it is good to respect peoples privacy.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -687,10 +1259,30 @@ class Tavern():
                                                 print("You decided to take the book, you will have time to read it later.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided against taking the book, I'm sure it is not important.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -700,10 +1292,30 @@ class Tavern():
                                                 print("You decided to take the book, you will have time to read it later.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided against taking the book, I'm sure it is not important.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -716,10 +1328,30 @@ class Tavern():
                                                 print("You decided to inspect the map, unfortunatly it is impossible the decipher.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the map, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -729,10 +1361,30 @@ class Tavern():
                                                 print("You decided to inspect the map, unfortunatly it is impossible the decipher.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the map, fair enough.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -766,10 +1418,30 @@ class Tavern():
                                                 print("You decided to take the rotting wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the rotting wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -779,10 +1451,30 @@ class Tavern():
                                                 print("You decided to take the rotting wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the rotting wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -797,10 +1489,30 @@ class Tavern():
                                                 print("You decided to inspect the map, unfortantly you cannot dechiper it.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -810,10 +1522,30 @@ class Tavern():
                                                 print("You decided to inspect the map, unfortantly you cannot dechiper it.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -836,10 +1568,30 @@ class Tavern():
                                                 print("You decided to take the rotting wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the rotting wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -849,10 +1601,30 @@ class Tavern():
                                                 print("You decided to take the rotting wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the rotting wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -867,10 +1639,30 @@ class Tavern():
                                                 print("You decided to inspect the map, unfortantly you cannot dechiper it.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -880,10 +1672,30 @@ class Tavern():
                                                 print("You decided to inspect the map, unfortantly you cannot dechiper it.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to inspect the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -921,10 +1733,30 @@ class Tavern():
                                                 print("You decided to open the book, it appears there is nothing inside.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to open the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -934,10 +1766,30 @@ class Tavern():
                                                 print("You decided to open the book, it appears there is nothing inside.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to open the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -952,10 +1804,30 @@ class Tavern():
                                                 print("You decided to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -965,10 +1837,30 @@ class Tavern():
                                                 print("You decided to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -991,10 +1883,30 @@ class Tavern():
                                                 print("You decided to open the book, it appears there is nothing inside.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to open the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -1004,10 +1916,30 @@ class Tavern():
                                                 print("You decided to open the book, it appears there is nothing inside.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to open the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1022,10 +1954,30 @@ class Tavern():
                                                 print("You decided to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -1035,10 +1987,30 @@ class Tavern():
                                                 print("You decided to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1067,10 +2039,30 @@ class Tavern():
                                                 print("You decided to take the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1080,10 +2072,30 @@ class Tavern():
                                                 print("You decided to take the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1095,10 +2107,30 @@ class Tavern():
                                             print("You opened the journal, but there is nothing inside.")
                                             print("It appears that your only option now is to go downstairs.")
                                             go_downstairs = str(input("Would you like to go downstairs."))
+                                            if go_downstairs.lower() == "yes":
+                                                print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                print('"..."')
+                                                print("BATTLE START")
+                                                combat_loop(player, enemy)
+                                            else:
+                                                print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                print('"..."')
+                                                print("BATTLE START")
+                                                combat_loop(player, enemy)
                                         elif open_arcane_journal.lower() == "no":
                                             print("You decided not to open the journal.")
                                             print("It appears that your only option now is to go downstairs.")
                                             go_downstairs = str(input("Would you like to go downstairs."))
+                                            if go_downstairs.lower() == "yes":
+                                                print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                print('"..."')
+                                                print("BATTLE START")
+                                                combat_loop(player, enemy)
+                                            else:
+                                                print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                print('"..."')
+                                                print("BATTLE START")
+                                                combat_loop(player, enemy)
                                         else:
                                             print(error)
                                     else:
@@ -1119,10 +2151,30 @@ class Tavern():
                                                 print("You decided to take the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1132,10 +2184,30 @@ class Tavern():
                                                 print("You decided to take the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1147,6 +2219,16 @@ class Tavern():
                                             print("You opened the journal, but there is nothing inside.")
                                             print("It appears that your only option now is to go downstairs.")
                                             go_downstairs = str(input("Would you like to go downstairs."))
+                                            if go_downstairs.lower() == "yes":
+                                                print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                print('"..."')
+                                                print("BATTLE START")
+                                                combat_loop(player, enemy)
+                                            else:
+                                                print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                print('"..."')
+                                                print("BATTLE START")
+                                                combat_loop(player, enemy)
                                         elif open_arcane_journal.lower() == "no":
                                             print("You decided not to open the journal.")
                                             print("It appears that your only option now is to go downstairs.")
@@ -1182,10 +2264,30 @@ class Tavern():
                                                 print("You decided to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided to not take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1195,10 +2297,30 @@ class Tavern():
                                                 print("You decided to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided to not take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -1211,10 +2333,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -1224,10 +2366,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1250,10 +2412,30 @@ class Tavern():
                                                 print("You decided to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1263,10 +2445,30 @@ class Tavern():
                                                 print("You decided to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the wood.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -1279,10 +2481,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -1292,10 +2514,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the map.")
                                                 print("It appears that your only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     else:
@@ -1337,10 +2579,30 @@ class Tavern():
                                                 print("You decided to take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -1350,10 +2612,30 @@ class Tavern():
                                                 print("You decided to take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1368,10 +2650,30 @@ class Tavern():
                                                 print("You decided to take the journal.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the journal.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -1381,10 +2683,30 @@ class Tavern():
                                                 print("You decided to take the journal.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the journal.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     else:
@@ -1405,10 +2727,30 @@ class Tavern():
                                                 print("You decided to take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -1418,10 +2760,30 @@ class Tavern():
                                                 print("You decided to take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1436,10 +2798,30 @@ class Tavern():
                                                 print("You decided to take the journal.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the journal.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -1449,10 +2831,30 @@ class Tavern():
                                                 print("You decided to take the journal.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the journal.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1486,10 +2888,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -1499,10 +2921,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1517,10 +2959,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1530,10 +2992,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1556,10 +3038,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -1569,10 +3071,30 @@ class Tavern():
                                                 print("You decided to take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1587,10 +3109,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1600,10 +3142,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1631,10 +3193,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -1644,10 +3226,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -1660,10 +3262,30 @@ class Tavern():
                                                 print("You decided to take the book.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1673,10 +3295,30 @@ class Tavern():
                                                 print("You decided to take the book.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1699,10 +3341,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -1712,10 +3374,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -1728,10 +3410,30 @@ class Tavern():
                                                 print("You decided to take the book.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1741,10 +3443,30 @@ class Tavern():
                                                 print("You decided to take the book.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You decided not to take the book.")
                                                 print("It appears that the only option now is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs?"))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1782,10 +3504,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -1795,10 +3537,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -1811,10 +3573,30 @@ class Tavern():
                                                 print("You decided to take the journal.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the journal")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -1824,10 +3606,30 @@ class Tavern():
                                                 print("You decided to take the journal.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the journal")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1850,10 +3652,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif open_arcane_journal.lower() == "no":
@@ -1863,10 +3685,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -1879,10 +3721,30 @@ class Tavern():
                                                 print("You decided to take the journal.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the journal")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -1892,10 +3754,30 @@ class Tavern():
                                                 print("You decided to take the journal.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the journal")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -1929,10 +3811,30 @@ class Tavern():
                                                 print("You took the map.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -1942,10 +3844,30 @@ class Tavern():
                                                 print("You took the map.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -1958,10 +3880,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -1971,10 +3913,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     else:
@@ -1995,10 +3957,30 @@ class Tavern():
                                                 print("You took the map.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -2008,10 +3990,30 @@ class Tavern():
                                                 print("You took the map.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -2024,10 +4026,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -2037,10 +4059,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     else:
@@ -2097,10 +4139,30 @@ class Tavern():
                                                 print("You took the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -2110,10 +4172,30 @@ class Tavern():
                                                 print("You took the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -2126,10 +4208,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() ==  "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() ==  "no":
@@ -2139,10 +4241,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() ==  "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2165,10 +4287,30 @@ class Tavern():
                                                 print("You took the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -2178,10 +4320,30 @@ class Tavern():
                                                 print("You took the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -2194,10 +4356,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() ==  "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() ==  "no":
@@ -2207,10 +4389,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() ==  "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2239,10 +4441,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -2252,10 +4474,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2270,10 +4512,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -2283,10 +4545,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2309,10 +4591,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -2322,10 +4624,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2340,10 +4662,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -2353,10 +4695,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2385,10 +4747,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -2398,10 +4780,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -2448,10 +4850,30 @@ class Tavern():
                                                 print("You took the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -2461,10 +4883,30 @@ class Tavern():
                                                 print("You took the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -2477,10 +4919,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() ==  "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() ==  "no":
@@ -2490,10 +4952,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() ==  "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2516,10 +4998,30 @@ class Tavern():
                                                 print("You took the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rusted_bell.lower() == "no":
@@ -2529,10 +5031,30 @@ class Tavern():
                                                 print("You took the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -2545,10 +5067,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() ==  "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() ==  "no":
@@ -2558,10 +5100,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() ==  "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2590,10 +5152,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -2603,10 +5185,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2621,10 +5223,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -2634,10 +5256,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2660,10 +5302,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -2673,10 +5335,30 @@ class Tavern():
                                                 print("You took the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the wood.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2691,10 +5373,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_rotting_wood.lower() == "no":
@@ -2704,10 +5406,30 @@ class Tavern():
                                                 print("You took the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the map")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         else:
@@ -2736,10 +5458,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                         elif take_faded_map.lower() == "no":
@@ -2749,10 +5491,30 @@ class Tavern():
                                                 print("You took the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             elif work_bench_choice_four.lower() == "no":
                                                 print("You didn't take the bell.")
                                                 print("It appears that your only option is to go downstairs.")
                                                 go_downstairs = str(input("Would you like to go downstairs."))
+                                                if go_downstairs.lower() == "yes":
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
+                                                else:
+                                                    print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                                                    print('"..."')
+                                                    print("BATTLE START")
+                                                    combat_loop(player, enemy)
                                             else:
                                                 print(error)
                                     elif work_bench_choice_three.lower() == "b":
@@ -2795,4 +5557,3 @@ class Tavern():
                  """)
         else:
             print(error)
-# pylance: disable=too-complex
