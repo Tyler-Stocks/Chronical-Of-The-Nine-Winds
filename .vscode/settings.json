@@ -1,5 +1,9 @@
 {
+    "pylance.complexity.function": {
+        "enabled": true,
+        "threshold": 100
+    },
     "python.analysis.typeCheckingMode": "basic",
     "editor.trimAutoWhitespace": true,
-    "python.linting.pylintEnabled": false,
+    "python.linting.pylintEnabled": false
 }
