@@ -10,7 +10,7 @@ my_inventory = Inventory()
 error = "\nIt appears something has gone wrong\n"
 
 class Tavern():
-    def tavern(self): # type: ignore 
+    def tavern(): # type: ignore
         print("""You wake up in a small dimly lit room. To your right there is a small boy, he appears to be sleeping peacfully. To your left there is a door, it appears to be
              broken, and worn out.
             """)
@@ -5545,6 +5545,16 @@ class Tavern():
                                                 A: Go Downstairs
                                                 B: Try to wake the boy up
                                              """))
+                    if go_downstairs.lower() == "a":
+                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                        print('"..."')
+                        print("BATTLE START")
+                        combat_loop(player, enemy)
+                    else:
+                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                        print('"..."')
+                        print("BATTLE START")
+                        combat_loop(player, enemy)
                 else:
                     print(error)
             elif take_bag.lower() == "no":
@@ -11065,6 +11075,16 @@ class Tavern():
                                                 A: Go Downstairs
                                                 B: Try to wake the boy up
                                              """))
+                    if go_downstairs.lower() == "yes":
+                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                        print('"..."')
+                        print("BATTLE START")
+                        combat_loop(player, enemy)
+                    else:
+                        print("You decided to go downstairs, as you reach the bottom of the stairs, you see a lumbering figure.")
+                        print('"..."')
+                        print("BATTLE START")
+                        combat_loop(player, enemy)
                 else:
                     print(error)
             else:
@@ -11074,3 +11094,7 @@ class Tavern():
                  """)
         else:
             print(error)
+
+tavern = Tavern.tavern()
+
+tavern.tavern()
