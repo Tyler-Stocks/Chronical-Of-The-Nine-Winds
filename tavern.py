@@ -497,9 +497,35 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("It appears there is a rotting piece of wood on the table:")
                                         take_rotting_wood = str(input("Would you like to take the piece of rotting wood?"))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood, perhaps it could be useful.")
+                                            work_bench_choice_four = str(input("Would you like to open the book?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to open the book, unfortunatly there is nothing inside.")
+                                                print("It appears now that your only option is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the book, fair enough.")
+                                                print("It appears now that your only option is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
                                     elif work_bench_choice_three.lower() == "b":
-                                        print("As you get closer to the book you notice to words ARCANE JOURNAL printed in violter letters near the top.")
+                                        print("As you get closer to the book you notice to words ARCANE JOURNAL printed in violet letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You go to look inside the journal, unfortunatly there is nothing inside.")
+                                            work_bench_choice_four = str(input("Would you like to take the wood."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps it will be usefull.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
                                     else:
                                         print(error)
                                 elif take_faded_map.lower() == "no":
@@ -511,9 +537,35 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("It appears there is a rotting piece of wood on the table:")
                                         take_rotting_wood = str(input("Would you like to take the piece of rotting wood?"))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood, perhaps it could be useful.")
+                                            work_bench_choice_four = str(input("Would you like to open the book?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to open the book, unfortunatly there is nothing inside.")
+                                                print("It appears now that your only option is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the book, fair enough.")
+                                                print("It appears now that your only option is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
                                     elif work_bench_choice_three.lower() == "b":
-                                        print("As you get closer to the book you notice to words ARCANE JOURNAL printed in violter letters near the top.")
+                                        print("As you get closer to the book you notice to words ARCANE JOURNAL printed in violet letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You go to look inside the journal, unfortunatly there is nothing inside.")
+                                            work_bench_choice_four = str(input("Would you like to take the wood."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood, perhaps it will be usefull.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
                                     else:
                                         print(error)
                                 else:
@@ -531,9 +583,61 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("You go to examine the map, it is to faded to dechipher.")
                                         take_faded_map = str(input("Would you like to take the map"))
+                                        if take_faded_map.lower() == "yes":
+                                            print("You decided to take the map.")
+                                            open_arcane_journal = str(input("Would you like to take the arcane journal."))
+                                            if open_arcane_journal.lower() == "yes":
+                                                print("You decided to take the journal, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            elif open_arcane_journal.lower() == "no":
+                                                print("You decided not to take the journal, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        elif take_faded_map.lower() == "no":
+                                            print("You decided not to take the map.")
+                                            open_arcane_journal = str(input("Would you like to take the arcane journal."))
+                                            if open_arcane_journal.lower() == "yes":
+                                                print("You decided to take the journal, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            elif open_arcane_journal.lower() == "no":
+                                                print("You decided not to take the journal, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
                                     elif work_bench_choice_three.lower() == "b":
-                                        print("As you get closer to the book you notice to words ARCANE JOURNAL printed in violter letters near the top.")
+                                        print("As you get closer to the book you notice to words ARCANE JOURNAL printed in violet letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You decided to open the journal.")
+                                            work_bench_choice_four = str(input("Would you like to examine the map"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the map.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the map, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
+                                        elif open_arcane_journal.lower() ==  "no":
+                                            print("You decided not to take the journal, fair enough.")
+                                            work_bench_choice_four = str(input("Would you like to examine the map"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the map.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the map, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            else:
+                                                print(error)
                                     else:
                                         print(error)
                                 elif take_rotting_wood.lower() == "no":
@@ -545,9 +649,24 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("You go to examine the map, it is to faded to dechipher.")
                                         take_faded_map = str(input("Would you like to take the map"))
+                                        if take_faded_map.lower() == "yes":
+                                            print("You decided not to take the map, fair enough.")
+                                            open_arcane_journal = str(input("Would you like to open the journal."))
+                                            if open_arcane_journal.lower() == "yes":
+                                                print("You decided to open the journal, unfortunatly there is nothing inside.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs"))
+                                            elif open_arcane_journal.lower() == "no":
+                                                print("You decided not to open the journal, it is good to respect peoples privacy.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
                                     elif work_bench_choice_three.lower() == "b":
                                         print("As you get closer to the book you notice to words ARCANE JOURNAL printed in violter letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You decided to open the journal, unfortunatly there is nothing inside.")
                                     else:
                                         print(error)
                                 elif take_rotting_wood.lower() == "no":
@@ -559,9 +678,63 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("You go to examine the map, it is to faded to dechipher.")
                                         take_faded_map = str(input("Would you like to take the map"))
+                                        if take_faded_map.lower() == "yes":
+                                            print("You decided to take the map.")
+                                            work_bench_choice_four = str(input("Would you like to open the book?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the book, you will have time to read it later.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided against taking the book, I'm sure it is not important.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif take_faded_map.lower() == "no":
+                                            print("You decided not to take the map.")
+                                            work_bench_choice_four = str(input("Would you like to open the book?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the book, you will have time to read it later.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided against taking the book, I'm sure it is not important.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
                                     elif work_bench_choice_three.lower() == "b":
                                         print("As you get closer to the book you notice to words ARCANE JOURNAL printed in violter letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You decided to open the journal, you find nothing but empty pages.")
+                                            work_bench_choice_four = str(input("Would you like to examine the map? "))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to inspect the map, unfortunatly it is impossible the decipher.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the map, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif open_arcane_journal.lower() == "no":
+                                            print("You decided to open the journal, you find nothing but empty pages.")
+                                            work_bench_choice_four = str(input("Would you like to examine the map? "))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to inspect the map, unfortunatly it is impossible the decipher.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the map, fair enough.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     else:
                                         print(error)
                                 else:
@@ -578,15 +751,73 @@ class Tavern():
                                           capital has near 10,000 people in it. So many people, I am sure it will be wonderfull.
                                           """)
                                     work_bench_choice_three = str(input("""Would you like to
-                                                                           A: Examin the map
-                                                                           B: Examin the rotting piece of wood
+                                                                           A: Examine the map
+                                                                           B: Examine the rotting piece of wood
                                                                        """))
                                     if work_bench_choice_three.lower() == "a":
                                         print("You go to examine the map, it is to faded to dechipher.")
                                         take_faded_map = str(input("Would you like to take the map"))
-                                    elif work_bench_choice_three.lower() == "a":
+                                        if take_faded_map.lower() == "yes":
+                                            print("You decided to take the map.")
+                                            work_bench_choice_four = str(input("Would you like to take the rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the rotting wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the rotting wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif take_faded_map.lower() == "no":
+                                            print("You decided not to take the map.")
+                                            work_bench_choice_four = str(input("Would you like to take the rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the rotting wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the rotting wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
+                                    elif work_bench_choice_three.lower() == "b":
                                         print("It appears there is a rotting piece of wood on the table:")
                                         take_rotting_wood = str(input("Would you like to take the piece of rotting wood?"))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood.")
+                                            work_bench_choice_four = str(input("Would you like to examine the map?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to inspect the map, unfortantly you cannot dechiper it.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the map.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif take_rotting_wood.lower() == "no":
+                                            print("You decided not to take the wood.")
+                                            work_bench_choice_four = str(input("Would you like to examine the map?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to inspect the map, unfortantly you cannot dechiper it.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the map.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
+                                    else:
+                                        print(error)
                                  elif open_arcane_journal.lower() == "no":
                                     print("You decided not to look in the journal. It is good to respect others privacy")
                                     work_bench_choice_three = str(input("""Would you like to
@@ -596,9 +827,67 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("You go to examine the map, it is to faded to dechipher.")
                                         take_faded_map = str(input("Would you like to take the map"))
-                                    elif work_bench_choice_three.lower() == "a":
+                                        if take_faded_map.lower() == "yes":
+                                            print("You decided to take the map.")
+                                            work_bench_choice_four = str(input("Would you like to take the rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the rotting wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the rotting wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif take_faded_map.lower() == "no":
+                                            print("You decided not to take the map.")
+                                            work_bench_choice_four = str(input("Would you like to take the rotting wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the rotting wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the rotting wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
+                                    elif work_bench_choice_three.lower() == "b":
                                         print("It appears there is a rotting piece of wood on the table:")
                                         take_rotting_wood = str(input("Would you like to take the piece of rotting wood?"))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood.")
+                                            work_bench_choice_four = str(input("Would you like to examine the map?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to inspect the map, unfortantly you cannot dechiper it.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the map.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif take_rotting_wood.lower() == "no":
+                                            print("You decided not to take the wood.")
+                                            work_bench_choice_four = str(input("Would you like to examine the map?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to inspect the map, unfortantly you cannot dechiper it.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to inspect the map.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
+                                    else:
+                                        print(error)
                                  else:
                                     print(error)
                             else:
@@ -623,9 +912,63 @@ class Tavern():
                                     if work_bench_choice_three.lower() == "a":
                                         print("It appears there is a piece of rotting wood on the table.")
                                         take_rotting_wood = str(input("Would you like to take the wood?"))
+                                        if take_rotting_wood.lower() == "yes":
+                                            print("You decided to take the wood.")
+                                            work_bench_choice_four = str(input("Would you like to open the book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to open the book, it appears there is nothing inside.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to open the book.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif take_rotting_wood.lower() == "no":
+                                            print("You decided not to take the wood.")
+                                            work_bench_choice_four = str(input("Would you like to open the book."))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to open the book, it appears there is nothing inside.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to open the book.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        else:
+                                            print(error)
                                     elif work_bench_choice_three.lower() == "b":
                                         print("As you get closer to the book you notice the words ARCANE JOURNAL printed in violet letters near the top.")
                                         open_arcane_journal = str(input("Would you like to open the journal."))
+                                        if open_arcane_journal.lower() == "yes":
+                                            print("You decided to open the journal, there is nothing inside.")
+                                            work_bench_choice_four = str(input("Would you like to take the wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
+                                        elif open_arcane_journal.lower() == "no":
+                                            print("You decided not to open the journal.")
+                                            work_bench_choice_four = str(input("Would you like to take the wood?"))
+                                            if work_bench_choice_four.lower() == "yes":
+                                                print("You decided to take the wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            elif work_bench_choice_four.lower() == "no":
+                                                print("You decided not to take the wood.")
+                                                print("It appears that your only option now is to go downstairs.")
+                                                go_downstairs = str(input("Would you like to go downstairs."))
+                                            else:
+                                                print(error)
                                     else:
                                         print(error)
                                 elif take_faded_map.lower() == "no":
