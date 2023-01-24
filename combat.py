@@ -35,3 +35,4 @@ def combat_loop(player, enemy):
         print(f'{player.name} has defeated {enemy.name}!')
     else:
         print(f'{player.name} has been defeated by {enemy.name}.')
+
