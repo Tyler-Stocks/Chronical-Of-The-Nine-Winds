@@ -11,12 +11,11 @@ error = "\nIt appears something has gone wrong\n"
 
 class Tavern():
     def tavern(self): # type: ignore
-        print("""You wake up in a small dimly lit room. To your right there is a small boy, he appears to be sleeping peacfully. To your left there is a door, it appears to be
-broken, and worn out.
-            """)
-        wake_up = input("""As you make to get up, you fell a wave of exhaustion roll over you. Will you:
-                       A: Overcome the Exhaustion
-                       B: Succumb to the Exhaustion
+        print("You wake up in a small dimly lit room. To your right there is a small boy, he appears to be sleeping peacfully. To your left there is a door, it appears to ")
+        print("broken, and worn out")
+        wake_up = input("""As you make to get up, you feel a wave of exhaustion roll over you. Will you:
+                           A: Overcome the Exhaustion
+                           B: Succumb to the Exhaustion
                     """)
 
         if wake_up.lower() == "a":
