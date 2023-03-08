@@ -1,4 +1,4 @@
-from name_select import Name_Select
+from name_select import MainNameSelect as name
 
 
 class gender_select():
@@ -6,64 +6,56 @@ class gender_select():
     def __init__(self):
 
         self.gender = ''
+        self.name = name.Name
 
     def ask_user_gender(self):
 
         while True:
 
-                self.gender = input(f'Are you a boy or a girl?\n')
+                self.gender = input(f'So {self.name} you a boy or a girl?\n')
 
                 try:
                     if self.gender.lower() == "boy":
-
                         pronoun_1 = "he"
                         pronoun_2 = "him"
-                        gender_confirmation = str(input(f'So you are a boy?'))
+                        gender_confirmation = input(f'So {self.name} you are a boy?')
 
                         try:
 
                             if gender_confirmation.lower() != "no":
-
+                                print('It will be noted.\n')
                                 break
 
                             else:
-
                                 continue
 
                         except ValueError:
-
                             raise ValueError
 
                     elif self.gender.lower() == 'girl':
-
                         pronoun_1 = 'she'
                         pronoun_2 = 'her'
-                        gender_confirmation = str(input(f'So you are a girl?'))
+                        gender_confirmation = input(f'So {self.name} you are a girl?\n')
 
                         try:
 
                             if gender_confirmation.lower() != 'no':
-
+                                print('It will be noted.\n')
                                 break
 
                             else:
-
                                 continue
 
                         except ValueError:
-
                             raise ValueError
 
                     elif self.gender.isspace():
-
-                        print(f'You must enter your gender.\n')
+                        print(f'Please enter a valid gender.\n')
 
                     else:
-
-                        print(f'You must enter a valid gender.\n')
+                        print(f'Please enter a valid gender.\n')
 
                 except ValueError:
-
                     raise ValueError
 
         return self.gender

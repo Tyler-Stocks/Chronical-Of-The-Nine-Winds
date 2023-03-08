@@ -10,37 +10,33 @@ class MainNameSelect():
 
             while True:
 
-                    self.name = str(input(f'Hello, what might your name be?\n'))
+                    self.name = input(f'Hello my friend, what might your name be?\n')
 
                     try:
 
                         if self.name.isspace():
-                            print(f'You must enter a name.\n')
+                            print(f'Please enter a game.\n')
 
 
                         elif self.name.isnumeric():
                             print(f'You cannot enter a number as your name.\n')
 
                         else:
-
                             name_confirmation = input(f'So your name is {self.name}?\n')
 
                             try:
 
                                 if name_confirmation.lower() != 'no':
-
+                                    print(f'Interesting, very interesting.\n')
                                     break
 
                                 else:
-
                                     continue
 
                             except ValueError:
-
                                 raise ValueError
 
                     except ValueError:
-
                         raise ValueError
 
             return self.name

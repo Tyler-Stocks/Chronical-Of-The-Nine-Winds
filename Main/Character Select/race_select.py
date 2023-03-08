@@ -71,41 +71,34 @@ class MainRaceSelect():
 
                 try:
                     if race_choice.lower() in ('1', 'human'):
-
                         race_confirmation = str(input(f'So {self.name} you are Human\n'))
 
                         try:
 
                             if race_confirmation.lower() in ('yes', 'y'):
-
                                 stats.add('Determination', 3)
                                 stats.add('Charisma', 2)
                                 self.race = 'Human'
-
                                 break
 
                             else:
-
                                 continue
 
                         except ValueError:
-
                             raise ValueError
 
                     elif race_choice.lower() in ('2', 'Dwarf'):
 
-                        race_confirmation = str(input(f'so {self.name} you are a dwarf?\n'))
+                        race_confirmation = input(f'so {self.name} you are a dwarf?\n')
 
                         try:
 
                             if race_confirmation.lower() in ('yes', 'y'):
-
                                 stats.add('Intelect', 2)
                                 stats.add('Strength', 5)
                                 stats.add('Agility', -5)
                                 stats.add('Charisma', -1)
                                 self.race = 'Dwarf'
-
                                 break
 
                             else:
@@ -123,7 +116,6 @@ class MainRaceSelect():
                         try:
 
                             if race_confirmation.lower() in ('yes', 'y'):
-
                                 stats.add('Mana', 3)
                                 stats.add('Casting', 10)
                                 stats.add('Intelect', 5)
@@ -137,46 +129,37 @@ class MainRaceSelect():
                                 break
 
                             else:
-
                                 continue
 
                         except ValueError:
-
                             raise ValueError
 
                     elif race_choice.lower() in ('4', 'giant'):
-
-                        race_confirmation = str(input(f'so {self.name} you are a Giant?\n'))
+                        race_confirmation = input(f'so {self.name} you are a Giant?\n')
 
                         try:
 
                             if race_confirmation.lower() in ('yes', 'y'):
-
                                 stats.add('Arcane', 5)
                                 stats.add('Strength', 5)
                                 stats.add('Magic Defense', 5)
                                 stats.add('Stealth', -5)
                                 self.race = 'Giant'
-
                                 break
 
                             else:
-
                                 continue
 
                         except ValueError:
-
                             raise ValueError
 
                     else:
-                        print("Please enter a valid race.")
+                        print(f'Please enter a valid race.')
 
                 except ValueError:
-
                     raise ValueError
 
             return self.race
-
 
     Race_Select_Obj = Race_Select()
 
