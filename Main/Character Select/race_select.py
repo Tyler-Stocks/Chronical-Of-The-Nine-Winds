@@ -1,6 +1,6 @@
 import time
 
-from base_stats import base_stats
+from Main.BaseStats.base_stats import base_stats
 from name_select import MainNameSelect as name
 
 stats = base_stats()

@@ -1,4 +1,4 @@
-from race_select import MainRaceSelect as race
+from Main.race_select import MainRaceSelect as race
 from name_select import MainNameSelect as name
 
 class age_select():
