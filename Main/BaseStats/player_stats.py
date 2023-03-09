@@ -1,6 +1,7 @@
-class base_stats:
+class BaseStats:
 
     def __init__(self):
+
         self.base_stats_list = [
             {'Health': 500},
             {'Defense': 50},
@@ -15,8 +16,8 @@ class base_stats:
             {'Intelect': 5},
         ]
 
-        return self.base_stats_list
 
+    # To call this function use stats.add({Stat}, {Value})
     def add(self, key, value):
 
         for stat_dict in self.base_stats_list:
@@ -26,19 +27,17 @@ class base_stats:
                 stat_dict[key] = current_value + value
                 break
 
-        else:
+            else:
+                print(f'The key {key} was not found in the dictionary, please check your spelling, or add the key to the dictionary.')
 
-            print(f'The key {key} was not found in the dictionary, please check your spelling, or add the key to the dictionary.')
-
+    # To call this function use stats.edit({Stat}, {Value})
     def edit(self, key, value):
 
         for stat_dict in self.base_stats_list:
 
             if key in stat_dict:
-
                 stat_dict[key] = value
                 break
 
-        else:
-
-            print(f'The key {key} was not found in the dictionary, please check your spelling, or add the key to the dictionary.')
+            else:
+                print(f'The key {key} was not found in the dictionary, please check your spelling, or add the key to the dictionary.')

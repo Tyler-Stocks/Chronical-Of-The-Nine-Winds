@@ -11,6 +11,6 @@ class Helmets():
 
     def helmets(self):
 
-        HuntersHelmet = {'Hunters Helmet': 1, 'Class': 'Armor', 'Type': 'Helmet', 'Rarity': 'Common', 'Weight': 1000, 'Arcane': False, 
+        hunters_helmet = {'Hunters Helmet': 1, 'Class': 'Armor', 'Type': 'Helmet', 'Rarity': 'Common', 'Weight': 1000, 'Arcane': False,
                          'Defense': 10, 'Magic Defense': False, 'Elemental Resist': False, 'Stealth': 1, 'Warmth': 1
                         }

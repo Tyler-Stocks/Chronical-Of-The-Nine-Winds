@@ -1,4 +1,4 @@
-class Player_Inventory():
+class PlayerInventory():
 
     def __init__(self):
         self.inventory = []

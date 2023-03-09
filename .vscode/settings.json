@@ -3,7 +3,14 @@
         "enabled": true,
         "threshold": 100
     },
-    "python.analysis.typeCheckingMode": "basic",
-    "editor.trimAutoWhitespace": true,
-    "python.linting.pylintEnabled": false
+    "python.analysis.typeCheckingMode": "basic", // Do not touch
+    "python.linting.enabled": true, // Do not touch
+    "python.linting.pylintArgs": [
+        "--disable=C0114",
+        "--disable=C0115",
+        "--disable=C0116",
+        "--disable=W0612",
+        "--max-line-length=200",
+        "--disable=C0103"
+    ]
 }

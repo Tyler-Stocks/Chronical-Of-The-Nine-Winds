@@ -1,13 +1,14 @@
 import time
 
-from Main.BaseStats.base_stats import base_stats
-from name_select import MainNameSelect as name
+from Main.BaseStats.player_stats import BaseStats
+from Main.CharacterSelect.name_select import MainNameSelect as Name
 
-stats = base_stats()
+name = Name
+stats = BaseStats()
 
 class MainRaceSelect():
 
-    class  Race_Select():
+    class  RaceSelect():
 
         def __init__(self):
 
@@ -16,11 +17,11 @@ class MainRaceSelect():
 
         def ask_user_race(self):
 
-            print(f'You must now choose of which race your were born into this world\n')
+            print('You must now choose of which race your were born into this world\n')
 
             time.sleep(3)
 
-            print(f'''1. Human:
+            print('''1. Human:
                     The most common race in all the lands. Humans are not particulariy intelligent, nor are they particullarily physically strong. However, their sheer
                     determination to defy all odds as well as their particular knack for negociations has lead to them prospering in the lands or Artaria.
 
@@ -67,7 +68,7 @@ class MainRaceSelect():
 
             while True:
 
-                race_choice = str(input(f'Which race would you like to pick?\n'))
+                race_choice = str(input('Which race would you like to pick?\n'))
 
                 try:
                     if race_choice.lower() in ('1', 'human'):
@@ -84,8 +85,8 @@ class MainRaceSelect():
                             else:
                                 continue
 
-                        except ValueError:
-                            raise ValueError
+                        except ValueError as exc:
+                            raise ValueError from exc
 
                     elif race_choice.lower() in ('2', 'Dwarf'):
 
@@ -102,12 +103,10 @@ class MainRaceSelect():
                                 break
 
                             else:
-
                                 continue
 
-                        except ValueError:
-
-                            raise ValueError
+                        except ValueError as exc:
+                            raise ValueError from exc
 
                     elif race_choice.lower() in ('3', 'elf'):
 
@@ -131,8 +130,8 @@ class MainRaceSelect():
                             else:
                                 continue
 
-                        except ValueError:
-                            raise ValueError
+                        except ValueError as exc:
+                            raise ValueError from exc
 
                     elif race_choice.lower() in ('4', 'giant'):
                         race_confirmation = input(f'so {self.name} you are a Giant?\n')
@@ -150,17 +149,17 @@ class MainRaceSelect():
                             else:
                                 continue
 
-                        except ValueError:
-                            raise ValueError
+                        except ValueError as exc:
+                            raise ValueError from exc
 
                     else:
-                        print(f'Please enter a valid race.')
+                        print('Please enter a valid race.')
 
-                except ValueError:
-                    raise ValueError
+                except ValueError as exc:
+                    raise ValueError from exc
 
             return self.race
 
-    Race_Select_Obj = Race_Select()
+    Race_Select_Obj = RaceSelect()
 
     Race = Race_Select_Obj.ask_user_race()
