@@ -1,4 +1,4 @@
-from Main.CharacterSelect.name_select import MainNameSelect as Name
+from Main.CharacterSelect.name_select import Name
 
 name = Name
 
@@ -8,7 +8,7 @@ class GenderSelector():
     def __init__(self):
 
         self.gender = ''
-        self.name = name.Name
+        self.name = name
 
     def ask_user_gender(self):
 
@@ -62,6 +62,6 @@ class GenderSelector():
 
         return self.gender, pronoun_1, pronoun_2
 
-gender_select_obj = GenderSelector()
+Gender_Select = GenderSelector()
 
-gender = gender_select_obj.ask_user_gender()
+Gender = Gender_Select.ask_user_gender()

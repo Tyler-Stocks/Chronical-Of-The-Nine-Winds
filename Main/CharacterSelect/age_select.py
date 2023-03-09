@@ -1,5 +1,5 @@
-from Main.CharacterSelect.race_select import MainRaceSelect as Race
-from Main.CharacterSelect.name_select import MainNameSelect as Name
+from Main.CharacterSelect.race_select import Race
+from Main.CharacterSelect.name_select import Name
 
 name = Name
 race = Race
@@ -8,8 +8,8 @@ class AgeSelector():
 
     def __init__(self):
 
-        self.name = name.Name
-        self.race = race.Race
+        self.name = name
+        self.race = race
 
     def ask_user_age(self) -> float:
 
@@ -49,3 +49,7 @@ class AgeSelector():
                 raise ValueError from exc
 
         return age_input
+
+Age_Select = AgeSelector()
+
+Age = Age_Select.ask_user_age()

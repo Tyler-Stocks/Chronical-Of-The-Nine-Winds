@@ -1,46 +1,44 @@
-class MainNameSelect():
+class NameSelector():
 
-    class NameSelect():
+    def __init__(self):
 
-        def __init__(self):
+        self.name = ''
 
-            self.name = ''
+    def ask_user_name(self):
 
-        def ask_user_name(self):
+        while True:
 
-            while True:
+            self.name = input('Hello my friend, what might your name be?\n')
 
-                self.name = input('Hello my friend, what might your name be?\n')
+            try:
 
-                try:
-
-                    if self.name.isspace():
-                        print('Please enter a game.\n')
+                if self.name.isspace():
+                    print('Please enter a game.\n')
 
 
-                    elif self.name.isnumeric():
-                        print('You cannot enter a number as your name.\n')
+                elif self.name.isnumeric():
+                    print('You cannot enter a number as your name.\n')
 
-                    else:
-                        name_confirmation = input(f'So your name is {self.name}?\n')
+                else:
+                    name_confirmation = input(f'So your name is {self.name}?\n')
 
-                        try:
+                    try:
 
-                            if name_confirmation.lower() != 'no':
-                                print('Interesting, very interesting.\n')
-                                break
+                        if name_confirmation.lower() != 'no':
+                            print('Interesting, very interesting.\n')
+                            break
 
-                            else:
-                                continue
+                        else:
+                            continue
 
-                        except ValueError as exc:
-                            raise ValueError from exc
+                    except ValueError as exc:
+                        raise ValueError from exc
 
-                except ValueError as exc:
-                    raise ValueError from exc
+            except ValueError as exc:
+                raise ValueError from exc
 
-            return self.name
+        return self.name
 
-    Name_Select_Obj = NameSelect()
+Name_Select = NameSelector()
 
-    Name = Name_Select_Obj.ask_user_name()
+Name = Name_Select.ask_user_name()

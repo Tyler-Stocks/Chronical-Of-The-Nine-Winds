@@ -9,8 +9,10 @@ class Trousers():
     def __init__(self) -> None:
         pass
 
-    def trousers(self):
+    def trousers(self) -> dict:
 
         hunters_trousers = {'Hunters Trousers': 1, 'Class': 'Armor', 'Type': 'Coat', 'Rarity': 'Common', 'Weight': 1600, 'Arcane': False,
                            'Defense': 4, 'Magic Defense': False, 'Elemental Resist': False, 'Stealth': 1, 'Warmth': 2
                           }
+
+        return hunters_trousers

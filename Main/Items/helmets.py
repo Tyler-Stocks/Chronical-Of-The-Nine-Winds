@@ -9,8 +9,10 @@ class Helmets():
     def __init__(self) -> None:
         pass
 
-    def helmets(self):
+    def helmets(self) -> dict:
 
         hunters_helmet = {'Hunters Helmet': 1, 'Class': 'Armor', 'Type': 'Helmet', 'Rarity': 'Common', 'Weight': 1000, 'Arcane': False,
                          'Defense': 10, 'Magic Defense': False, 'Elemental Resist': False, 'Stealth': 1, 'Warmth': 1
                         }
+
+        return hunters_helmet
