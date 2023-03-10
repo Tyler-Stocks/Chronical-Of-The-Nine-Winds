@@ -1,7 +1,7 @@
 import time
 
 from Main.BaseStats.player_stats import BaseStats as Stats
-from Main.CharacterSelect.name_select import Name
+from Main.Personilization.name_select import Name
 
 name = Name
 stats = Stats()

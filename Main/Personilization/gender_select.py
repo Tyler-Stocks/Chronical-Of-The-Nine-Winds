@@ -1,4 +1,4 @@
-from Main.CharacterSelect.name_select import Name
+from Main.Personilization.name_select import Name
 
 name = Name
 

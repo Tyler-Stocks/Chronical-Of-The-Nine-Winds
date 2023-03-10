@@ -1,5 +1,5 @@
-from Main.CharacterSelect.race_select import Race
-from Main.CharacterSelect.name_select import Name
+from Main.Personilization.race_select import Race
+from Main.Personilization.name_select import Name
 
 name = Name
 race = Race
