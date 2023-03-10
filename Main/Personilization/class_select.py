@@ -1,12 +1,12 @@
-from Main.CharacterSelect.race_select import Race
-from Main.CharacterSelect.name_select import Name
+from Main.Personilization.race_select import Race
+from Main.Personilization.name_select import Name
 
 race = Race
 name = Name
 
 class ClassSelector():
 
-    def __init__(self):
+    def __init__(self) -> None:
 
         self.classes = ''
 
@@ -27,7 +27,7 @@ class ClassSelector():
                                         +1 Perception
                                         +1 Agility
 
-                                                            -----------Starting Equipment-----------
+                                        -----------Starting Armor-----------
 
                                         -----Hunters Helmet-----                              -----Hunters Coat-----
 
@@ -49,6 +49,17 @@ class ClassSelector():
                                         Defense: + 4                                          Defense: + 3
                                         Stealth: + 1                                          Stealth: + 1
                                         Warmth: + 2                                           Warmth: + 1
+                                        
+                                        ----------Starting Weapons----------
+                                        
+                                        -----Hunters Bow-----                                -----Hunters Knife-----
+                                        
+                                        A simple handmade bow, works well for hunting,       A simple hunting knife. Great for skinning animals, however it is
+                                        but is not very equiped for tougher enimies.         not very equiped for peircing armor.
+                                        
+                                        Weight: 1.1kg                                        Weight: 150g
+                                        Attack: 5                                            Attack: 5
+                                        Sound: Noisy                                         Sound: Quiet
                                 ''')
         else:
             print("hello world")
