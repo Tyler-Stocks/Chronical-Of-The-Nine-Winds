@@ -9,4 +9,8 @@ TODO: Get a proper naming convention so I don't die inside every time I try to f
 
 Beta 0.2:
 
-Fixed naming convention so that I can understand it. Continued work on the class system, and added a difficulty selector. Additionally, I refactored the code to use less inheritence.
+Created Proper naming convention
+
+Reordered Dict Entries
+
+Created new subfolder for classes.
