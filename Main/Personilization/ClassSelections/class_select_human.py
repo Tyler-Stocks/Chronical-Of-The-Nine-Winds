@@ -54,6 +54,8 @@ class ClassSelectorHuman():
                                     Weight: 1.1kg                                        Weight: 150g
                                     Attack: 5                                            Attack: 5
                                     Sound: Noisy                                         Sound: Quiet
+
+                                    
                             ''')
 
         return self.classes

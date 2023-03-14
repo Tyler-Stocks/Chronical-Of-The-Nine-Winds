@@ -1,25 +1,28 @@
+import time
+
 from Main.Personilization.name_select import Name
 
 name = Name
 
-
 class GenderSelector():
 
-    def __init__(self):
+    def __init__(self) -> None:
 
         self.gender = ''
+        self.pronounFirstPerson = ''
+        self.pronoun_2 = ''
         self.name = name
 
-    def ask_user_gender(self):
+    def ask_user_gender(self) -> dict:
 
         while True:
 
-            self.gender = input(f'So {self.name} you a boy or a girl?\n')
+            self.gender = input('What gender are you?\n')
 
             try:
-                if self.gender.lower() == "boy":
-                    pronoun_1 = "he"
-                    pronoun_2 = "him"
+                if self.gender.lower() in('boy', 'man', 'male'):
+                    self.pronounFirstPerson = "he"
+                    self.pronounThirdPerson = "him"
                     gender_confirmation = input(f'So {self.name} you are a boy?')
 
                     try:
@@ -34,9 +37,9 @@ class GenderSelector():
                     except ValueError as exc:
                         raise ValueError from exc
 
-                elif self.gender.lower() == 'girl':
-                    pronoun_1 = 'she'
-                    pronoun_2 = 'her'
+                elif self.gender.lower() in('girl', 'woman', 'female'):
+                    self.pronounFirstPerson = 'she'
+                    self.pronounThirdPerson = 'her'
                     gender_confirmation = input(f'So {self.name} you are a girl?\n')
 
                     try:
@@ -51,16 +54,23 @@ class GenderSelector():
                     except ValueError as exc:
                         raise ValueError from exc
 
+                elif self.gender.lower() not in('boy', 'man', 'male', 'girl', 'woman', 'female'):
+                    print('I am to lazy to program in support for more genders, if this offends you')
+                    time.sleep(2)
+                    print('Perhaps this game is not the one for you. Have a wonderful day, and may god bless you.')
+
                 elif self.gender.isspace():
-                    print('Please enter a valid gender.\n')
+                    print('You must enter a gender.\n')
 
                 else:
-                    print('Please enter a valid gender.\n')
+                    print('It appears that something has gone wrong, please try not to use an input of a number as it may cause problems.\n')
 
             except ValueError as exc:
                 raise ValueError from exc
 
-        return self.gender, pronoun_1, pronoun_2
+        genderAndPronouns = {'Gender': self.gender, 'Pronoun First Person': self.pronounFirstPerson, 'Pronoun Third Person': self.pronounThirdPerson}
+
+        return genderAndPronouns
 
 Gender_Select = GenderSelector()
 
