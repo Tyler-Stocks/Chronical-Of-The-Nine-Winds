@@ -35,9 +35,9 @@ class Gender:
 
             errorOccured = inputErrorHandler.input_error_handler(self.gender, 'str', 20)
 
-        print(self.gender)
-
     def check_for_valid_gender(self):
+        console.clear(0)
+
         if inputs.boy_values(self.gender.lower()):
             return True
         elif inputs.girl_values(self.gender.lower()):
@@ -50,10 +50,24 @@ class Gender:
     def confirm_gender(self):
         console.clear(0)
 
-        while not self.confirm:
+        
+        while True:
             self.confirm = input(f'{self.gender} is correct? ')
+
+            if inputs.yes_values(self.confirm):
+                return True
+            elif inputs.no_values(self.confirm):
+                return False
+            else:
+                inputError.invalid_input('yes or no')
+
+    def get_gender(self):
+        console.clear(0)
+
+        self.input_gender()
+
 
 
 Gender_Instance = Gender()
 
-Gender_Instance.input_gender()
+Gender_Instance.get_gender()
