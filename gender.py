@@ -33,8 +33,7 @@ class Gender:
         while errorOccured:
             self.gender = input('What gender are you? Boy, Girl, or Other: ')
 
-            errorOccured = inputErrorHandler.input_error_handler(
-                self.gender, 'str', 20)
+            errorOccured = inputErrorHandler.input_error_handler(self.gender, 'str', 20)
 
         print(self.gender)
 
