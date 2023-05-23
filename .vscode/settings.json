@@ -1,0 +1,27 @@
+{
+    "pylance.complexity.function": {
+        "enabled": true,
+        "threshold": 100
+    },
+    "python.analysis.typeCheckingMode": "basic", //! Do Not Touch
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=C0114",
+        "--disable=C0115",
+        "--disable=C0116",
+        "--disable=W0612",
+        "--max-line-length=200",
+        "--disable=C0103",
+        "--disable=C0303",
+        "--disable=C0413",
+        "--disable=W0201"
+    ],
+    "python.testing.pytestArgs": [
+        "Main"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+}
