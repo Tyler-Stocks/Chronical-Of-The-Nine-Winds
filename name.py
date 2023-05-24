@@ -50,7 +50,7 @@ class Name:
 
             if inputValues.yes_values(self.confirm):
                 return True
-            elif inputValues.no_values(self.confirm):
+            if inputValues.no_values(self.confirm):
                 return False
 
             inputs.invalid_input('yes or no')
@@ -78,7 +78,7 @@ class Name:
             has_middle_name = input("Do you have a middle name? ")
             if inputValues.yes_values(has_middle_name):
                 return True
-            elif inputValues.no_values(has_middle_name):
+            if inputValues.no_values(has_middle_name):
                 return False
 
             inputs.invalid_input('yes or no')
@@ -108,7 +108,7 @@ class Name:
 
             if inputValues.yes_values(self.confirm):
                 return True
-            elif inputValues.no_values(self.confirm):
+            if inputValues.no_values(self.confirm):
                 return False
 
             inputs.invalid_input('yes or no')
@@ -154,7 +154,7 @@ class Name:
             self.confirm = input(f'{self.last_name} is correct? ')
             if inputValues.yes_values(self.confirm):
                 return True
-            elif inputValues.no_values(self.confirm):
+            if inputValues.no_values(self.confirm):
                 return False
 
             inputs.invalid_input('yes or no')
