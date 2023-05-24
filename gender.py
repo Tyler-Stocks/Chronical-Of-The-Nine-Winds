@@ -38,14 +38,16 @@ class Gender:
     def check_for_valid_gender(self):
         console.clear(0)
 
-        if inputs.boy_values(self.gender.lower()):
-            return True
-        elif inputs.girl_values(self.gender.lower()):
-            return True
-        elif self.gender.lower() == 'other':
-            return True
-        else:
-            return False
+        while True:
+            if inputs.boy_values(self.gender.lower()):
+                return True
+            elif inputs.girl_values(self.gender.lower()):
+                return True
+            elif self.gender.lower() == 'other':
+                return True
+            else:
+                inputError.invalid_input('must be a valid gender')
+                return False
 
     def confirm_gender(self):
         console.clear(0)
@@ -61,12 +63,26 @@ class Gender:
             else:
                 inputError.invalid_input('yes or no')
 
+    def get_custom_gender_name(self):
+        
+        while True:
+            self.gender = input('Input the name of your gender: ')
+
+            if inputErrorHandler.input_error_handler(self.gender, 'str', 25):
+                continue
+            else:
+                break
+
     def get_gender(self):
         console.clear(0)
 
-        self.input_gender()
-
-
+        while True:
+            self.input_gender()
+            if self.check_for_valid_gender():
+                if self.confirm_gender():
+                    break
+                
+        return self.gender                 
 
 Gender_Instance = Gender()
 
