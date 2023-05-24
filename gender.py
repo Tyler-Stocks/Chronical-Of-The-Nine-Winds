@@ -53,8 +53,7 @@ class Gender:
             if self.gender.lower() == 'other':
                 return True
 
-            inputs.invalid_input('must be a valid gender')
-            return False
+            inputs.invalid_input('Must be a valid gender')
 
     def confirm_gender(self):
         """
