@@ -45,15 +45,7 @@ class Name:
         """
         console.clear(0)
 
-        while True:
-            self.confirm = input(f'{self.first_name} is correct? ')
-
-            if inputValues.yes_values(self.confirm):
-                return True
-            if inputValues.no_values(self.confirm):
-                return False
-
-            inputs.invalid_input('yes or no')
+        inputValues.check_for_yes_no('User Input')
 
     def get_first_name(self):
         """

@@ -62,16 +62,6 @@ class Gender:
         console.clear(0)
 
 
-        while True:
-            self.confirm = input(f'{self.gender} is correct? ')
-
-            if inputValues.yes_values(self.confirm):
-                return True
-            if inputValues.no_values(self.confirm):
-                return False
-
-            inputs.invalid_input('yes or no')
-
     def get_custom_gender_name(self):
         """
         If the user chooses 'other', get the name of their 'custom' gender

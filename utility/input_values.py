@@ -1,6 +1,8 @@
 """
 Class to check for input values.
 """
+from utility import errors as e
+inputs = e.InputErrors()
 class InputValues:
     """
     Class to check for certain input values.
@@ -47,6 +49,14 @@ class InputValues:
 
         return bool(user_input in(girl_input_values))
 
-    def check_for_input_values(self, user_input, field):
-        """Check for valid input."""
-        
+    def check_for_yes_no(self, user_input):
+        """Checks to see if input is yes or no"""
+        while True:
+            confirm = input(f'{user_input} is correct? ')
+
+            if self.yes_values(confirm):
+                return True
+            if self.no_values(confirm):
+                return False
+
+            inputs.invalid_input('yes or no')
