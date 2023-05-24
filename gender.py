@@ -52,9 +52,9 @@ class Gender:
                 return True
             if self.gender.lower() == 'other':
                 return True
-            else:
-                inputs.invalid_input('must be a valid gender')
-                return False
+
+            inputs.invalid_input('must be a valid gender')
+            return False
 
     def confirm_gender(self):
         """
@@ -70,8 +70,8 @@ class Gender:
                 return True
             if inputValues.no_values(self.confirm):
                 return False
-            else:
-                inputs.invalid_input('yes or no')
+
+            inputs.invalid_input('yes or no')
 
     def get_custom_gender_name(self):
         """
@@ -83,8 +83,7 @@ class Gender:
 
             if inputs.error_handler(self.gender, 'str', 25):
                 continue
-            else:
-                break
+
 
     def get_gender(self):
         """

@@ -1,3 +1,6 @@
+"""
+Module to get user name
+"""
 from utility import errors as e
 from utility import input_values as iV
 from utility import console as c
@@ -9,7 +12,9 @@ inputValues = iV.InputValues()
 console = c.Console()
 
 class Name:
-
+    """
+    Class to get user name
+    """
     def __init__(self):
 
         self.first_name = ''
@@ -21,8 +26,10 @@ class Name:
 
         console.clear(0)
 
-# Get First Name
     def input_first_name(self):
+        """
+        Input user first name
+        """
         console.clear(0)
 
         error_occured = True
@@ -33,6 +40,9 @@ class Name:
             error_occured = inputs.error_handler(self.first_name, 'str', 99)
 
     def confirm_first_name(self):
+        """
+        Confirm User First Name
+        """
         console.clear(0)
 
         while True:
@@ -42,10 +52,13 @@ class Name:
                 return True
             elif inputValues.no_values(self.confirm):
                 return False
-            else:
-                inputs.invalid_input('yes or no')
+
+            inputs.invalid_input('yes or no')
 
     def get_first_name(self):
+        """
+        Get User First Name
+        """
         console.clear(0)
 
         while not inputValues.yes_values(self.confirm):
@@ -55,8 +68,10 @@ class Name:
         self.confirm = ''
         return self.first_name
 
-# Get Middle Name
     def check_for_middle_name(self):
+        """
+        Check to see if user has middle name
+        """
         console.clear(0)
 
         while True:
@@ -65,11 +80,14 @@ class Name:
                 return True
             elif inputValues.no_values(has_middle_name):
                 return False
-            else:
-                inputs.invalid_input('yes or no')
+
+            inputs.invalid_input('yes or no')
 
 
     def input_middle_name(self):
+        """
+        Input middle name
+        """
         console.clear(0)
 
         error_occured = True
@@ -80,6 +98,9 @@ class Name:
             error_occured = inputs.error_handler(self.middle_name, 'str', 99)
 
     def confirm_middle_name(self):
+        """
+        Confirm middle name
+        """
         console.clear(0)
 
         while True:
@@ -89,10 +110,13 @@ class Name:
                 return True
             elif inputValues.no_values(self.confirm):
                 return False
-            else:
-                inputs.invalid_input('yes or no')
+
+            inputs.invalid_input('yes or no')
 
     def get_middle_name(self):
+        """
+        Get middle name
+        """
         console.clear(0)
 
         if not self.check_for_middle_name():
@@ -107,6 +131,9 @@ class Name:
 
 # Get Last Name
     def input_last_name(self):
+        """
+        Input Last Name
+        """
         console.clear(0)
 
         error_occured = True
@@ -118,6 +145,9 @@ class Name:
                 self.last_name, 'str', 99)
 
     def confirm_last_name(self):
+        """
+        Confirm Last Name
+        """
         console.clear(0)
 
         while True:
@@ -126,10 +156,13 @@ class Name:
                 return True
             elif inputValues.no_values(self.confirm):
                 return False
-            else:
-                inputs.invalid_input('yes or no')
+
+            inputs.invalid_input('yes or no')
 
     def get_last_name(self):
+        """
+        Get Last Name
+        """
         console.clear(0)
 
         while not inputValues.yes_values(self.confirm):
@@ -139,8 +172,10 @@ class Name:
         self.confirm = ''
         return self.first_name
 
-# Get Full Name, Format it, then Store it
     def format_name(self):
+        """
+        Format Name
+        """
         self.first_name = self.first_name.capitalize().strip()
         self.middle_name = self.middle_name.capitalize().strip()
         self.last_name = self.last_name.capitalize().strip()
@@ -148,6 +183,9 @@ class Name:
         self.full_name = f'{self.first_name} {self.middle_name if not "" else ""} {self.last_name}'
 
     def get_full_name(self):
+        """
+        Get Full Name
+        """
         console.clear(0)
 
         self.get_first_name()
@@ -155,11 +193,17 @@ class Name:
         self.get_last_name()
 
     def save_name(self):
+        """
+        Store Full Name
+        """
         player_information['Name']['First Name'] = self.first_name
         player_information['Name']['Middle Name'] = self.middle_name
         player_information['Name']['Last Name'] = self.last_name
 
     def main(self):
+        """
+        Get Full Name
+        """
         console.clear(0)
 
         self.get_full_name()
