@@ -46,3 +46,9 @@ class InputValues:
                             ]
 
         return bool(user_input in(girl_input_values))
+
+    def check_for_input_values(self, user_input, field):
+        """
+        Damm
+        """
+        print(f'Damm, {user_input}{field}')
