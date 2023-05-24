@@ -1,23 +1,21 @@
-from Utility import errors as e
-from Utility import input_values as iV
-from Utility import console as c
-from Utility import input_error_handler as iEH
-import player as p
+from utility import errors as e
+from utility import input_values as iV
+from utility import console as c
 
-playerInformation = p.Player()
-inputError = e.InputErrors()
-inputs = iV.InputValues()
+from player import player_information
+
+inputs = e.InputErrors()
+inputValues = iV.InputValues()
 console = c.Console()
-inputErrorHandler = iEH.InputErrorHandler()
 
 class Name:
 
     def __init__(self):
 
-        self.firstName = ''
-        self.middleName = ''
-        self.lastName = ''
-        self.fullName = ''
+        self.first_name = ''
+        self.middle_name = ''
+        self.last_name = ''
+        self.full_name = ''
 
         self.confirm = ''
 
@@ -27,74 +25,72 @@ class Name:
     def input_first_name(self):
         console.clear(0)
 
-        errorOccured = True
+        error_occured = True
 
-        while errorOccured:
-            self.firstName = input('Please input your first name: ')
+        while error_occured:
+            self.first_name = input('Please input your first name: ')
 
-            errorOccured = inputErrorHandler.input_error_handler(
-                self.firstName, 'str', 99)
+            error_occured = inputs.error_handler(self.first_name, 'str', 99)
 
     def confirm_first_name(self):
         console.clear(0)
 
         while True:
-            self.confirm = input(f'{self.firstName} is correct? ')
+            self.confirm = input(f'{self.first_name} is correct? ')
 
-            if inputs.yes_values(self.confirm):
+            if inputValues.yes_values(self.confirm):
                 return True
-            elif inputs.no_values(self.confirm):
+            elif inputValues.no_values(self.confirm):
                 return False
             else:
-                inputError.invalid_input('yes or no')
+                inputs.invalid_input('yes or no')
 
     def get_first_name(self):
         console.clear(0)
 
-        while not inputs.yes_values(self.confirm):
+        while not inputValues.yes_values(self.confirm):
             self.input_first_name()
             self.confirm_first_name()
 
         self.confirm = ''
-        return self.firstName
+        return self.first_name
 
 # Get Middle Name
     def check_for_middle_name(self):
         console.clear(0)
 
         while True:
-            hasMiddleName = input("Do you have a middle name? ")
-            if inputs.yes_values(hasMiddleName):
+            has_middle_name = input("Do you have a middle name? ")
+            if inputValues.yes_values(has_middle_name):
                 return True
-            elif inputs.no_values(hasMiddleName):
+            elif inputValues.no_values(has_middle_name):
                 return False
             else:
-                inputError.invalid_input('yes or no')
+                inputs.invalid_input('yes or no')
 
 
     def input_middle_name(self):
         console.clear(0)
 
-        errorOccured = True
+        error_occured = True
 
-        while errorOccured:
-            self.middleName = input('Please input your middle name: ')
+        while error_occured:
+            self.middle_name = input('Please input your middle name: ')
 
-            errorOccured = inputErrorHandler.input_error_handler(
-                self.middleName, 'str', 99)
+            error_occured = inputs.error_handler(self.middle_name, 'str', 99)
 
     def confirm_middle_name(self):
         console.clear(0)
 
         while True:
-            self.confirm = input(f'{self.middleName} is correct? ')
+            self.confirm = input(f'{self.middle_name} is correct? ')
 
-            if inputs.yes_values(self.confirm):
+            if inputValues.yes_values(self.confirm):
                 return True
-            elif inputs.no_values(self.confirm):
+            elif inputValues.no_values(self.confirm):
                 return False
             else:
-                inputError.invalid_input('yes or no')
+                inputs.invalid_input('yes or no')
 
     def get_middle_name(self):
         console.clear(0)
@@ -102,54 +98,54 @@ class Name:
         if not self.check_for_middle_name():
             pass
         else:
-            while not inputs.yes_values(self.confirm):
+            while not inputValues.yes_values(self.confirm):
                 self.input_middle_name()
                 self.confirm_middle_name()
 
         self.confirm = ''
-        return self.middleName
+        return self.middle_name
 
 # Get Last Name
     def input_last_name(self):
         console.clear(0)
 
-        errorOccured = True
+        error_occured = True
 
-        while errorOccured:
-            self.lastName = input('Please input your last name: ')
+        while error_occured:
+            self.last_name = input('Please input your last name: ')
 
-            errorOccured = inputErrorHandler.input_error_handler(
-                self.lastName, 'str', 99)
+            error_occured = inputs.error_handler(
+                self.last_name, 'str', 99)
 
     def confirm_last_name(self):
         console.clear(0)
 
         while True:
-            self.confirm = input(f'{self.lastName} is correct? ')
-            if inputs.yes_values(self.confirm):
+            self.confirm = input(f'{self.last_name} is correct? ')
+            if inputValues.yes_values(self.confirm):
                 return True
-            elif inputs.no_values(self.confirm):
+            elif inputValues.no_values(self.confirm):
                 return False
             else:
-                inputError.invalid_input('yes or no')
+                inputs.invalid_input('yes or no')
 
     def get_last_name(self):
         console.clear(0)
 
-        while not inputs.yes_values(self.confirm):
+        while not inputValues.yes_values(self.confirm):
             self.input_last_name()
             self.confirm_last_name()
 
         self.confirm = ''
-        return self.firstName
+        return self.first_name
 
 # Get Full Name, Format it, then Store it
     def format_name(self):
-        self.firstName = self.firstName.capitalize().strip()
-        self.middleName = self.middleName.capitalize().strip()
-        self.lastName = self.lastName.capitalize().strip()
+        self.first_name = self.first_name.capitalize().strip()
+        self.middle_name = self.middle_name.capitalize().strip()
+        self.last_name = self.last_name.capitalize().strip()
 
-        self.fullName = f'{self.firstName} {self.middleName if not "" else ""} {self.lastName}'
+        self.full_name = f'{self.first_name} {self.middle_name if not "" else ""} {self.last_name}'
 
     def get_full_name(self):
         console.clear(0)
@@ -159,10 +155,9 @@ class Name:
         self.get_last_name()
 
     def save_name(self):
-        playerInformation.name['First Name'] = self.firstName
-        playerInformation.name['Middle Name'] = self.middleName
-        playerInformation.name['Last Name'] = self.lastName
-        playerInformation.name['Full Name'] = self.fullName
+        player_information['Name']['First Name'] = self.first_name
+        player_information['Name']['Middle Name'] = self.middle_name
+        player_information['Name']['Last Name'] = self.last_name
 
     def main(self):
         console.clear(0)
