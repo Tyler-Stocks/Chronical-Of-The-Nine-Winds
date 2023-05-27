@@ -6,7 +6,7 @@ player_information = {
         'Last Name': '',
     },
     'Gender': {
-        'Gender': '',
+        'Name': '',
         'Pronoun One': '',
         'Pronoun Two': '',
         'Formal Declaration': '',

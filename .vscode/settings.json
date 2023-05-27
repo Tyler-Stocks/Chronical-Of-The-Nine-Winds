@@ -1,18 +1,14 @@
 {
-    "pylance.complexity.function": {
-        "enabled": true,
-        "threshold": 100
-    },
     "python.analysis.typeCheckingMode": "basic", //! Do Not Touch
     "python.linting.enabled": true,
-    "python.linting.pylintArgs": [
-    ],
+    "python.linting.pylintArgs": [],
     "python.testing.pytestArgs": [
         "Main"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "[python]": {
-        "editor.defaultFormatter": null
+        "editor.defaultFormatter": "ms-python.autopep8"
     },
+    "python.formatting.provider": "none",
 }

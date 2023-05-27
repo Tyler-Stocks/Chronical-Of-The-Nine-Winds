@@ -55,7 +55,7 @@ class InputErrors:
         """
         Prints Error if an input is invalid
         """
-        print(f'The input must be {message}.')
+        print(f'{message}')
         console.clear(1)
 
     def error_handler(self, user_input, data_type, length):
