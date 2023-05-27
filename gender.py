@@ -2,18 +2,18 @@
 Module to get the users gender.
 Structure:
     Gender
-       |
-       |--__init__
-       |
-       |--input_gender
-       |
-       |--check_for_valid_input
-       |
-       |--confirm_gender
-       |
-       |--format
-       |
-       |--get_gender
+    |
+    |--__init__
+    |
+    |--input_gender
+    |
+    |--check_for_valid_input
+    |
+    |--confirm_gender
+    |
+    |--format
+    |
+    |--get_gender
 """
 from utility import errors as e
 from utility import input_values as iV

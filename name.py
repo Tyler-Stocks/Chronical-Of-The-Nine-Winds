@@ -1,34 +1,32 @@
 """
 Get User Name.
 Structure
-    Name
-      |--__init__
-      |
-      |--input_first_name
-      |
-      |--confirm_first_name
-      |
-      |--get_first_name
-      |
-      |--check_for_middle_name
-      |
-      |--input_middle_name
-      |
-      |--confirm_middle_name
-      |
-      |--get_middle_name
-      |
-      |--input_last_name
-      |
-      |--confirm_last_name
-      |
-      |--get_last_name
-      |
-      |--format
-      |
-      |--save
-      |
-      |--main
+Name
+    |--__init__
+    |
+    |--input_first_name
+    |
+    |--confirm_first_name
+    |
+    |--get_first_name
+    |
+    |--input_middle_name
+    |
+    |--confirm_middle_name
+    |
+    |--get_middle_name
+    |
+    |--input_last_name
+    |
+    |--confirm_last_name
+    |
+    |--get_last_name
+    |
+    |--format
+    |
+    |--save
+    |
+    |--main
 """
 from utility import errors
 from utility import input_values

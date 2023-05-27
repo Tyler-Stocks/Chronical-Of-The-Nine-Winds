@@ -1,11 +1,13 @@
 """
 Class for different utility surrounding input utility
 Structure:
-    StringUtility
+    InputUtility
     |
     |--__init__
     |
-    |--format_string
+    |--string
+    |
+    |--integer
 """
 import math
 class InputUtility:
