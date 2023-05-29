@@ -1,12 +1,21 @@
 """
 Class to check for input values.
+InputValues
+|
+|--__init__
+|
+|--yes_values
+|
+|--no_values
+|
+|--boy_values
+|
+|--girl_values
 """
-from utility import errors as e
-inputs = e.InputErrors()
+from utility import custom_errors
+inputs = custom_errors.InputErrors()
 class InputValues:
-    """
-    Class to check for certain input values.
-    """
+    """Class to check for certain input values."""
 
     def __init__(self):
         self.valid_yes_values = ['y', 'yes', 'yea', 'yessir']

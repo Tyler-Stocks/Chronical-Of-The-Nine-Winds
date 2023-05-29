@@ -1,7 +1,9 @@
 {
     "python.analysis.typeCheckingMode": "basic", //! Do Not Touch
     "python.linting.enabled": true,
-    "python.linting.pylintArgs": [],
+    "python.linting.pylintArgs": [
+        "--max-line-length = 200"
+    ],
     "python.testing.pytestArgs": [
         "Main"
     ],
@@ -10,5 +12,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
     },
+
     "python.formatting.provider": "none",
 }

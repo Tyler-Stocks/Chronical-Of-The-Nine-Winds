@@ -4,6 +4,9 @@ player_information = {
         'First Name': '',
         'Middle Name': '',
         'Last Name': '',
+        'Length': '',
+        'Language': '',
+        'Syllables': ''
     },
     'Gender': {
         'Name': '',

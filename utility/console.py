@@ -1,9 +1,19 @@
-"""Utility Module to provdide utility for my project"""
+"""
+The 'console' module allows for you to interact with the console in different ways.
+Structure:
+Console
+|
+|--__init__(self)
+|
+|--clear(self, delay = 0)
+|
+|--color_test(self, text, color = 'white', bold = 'false')
+"""
+
 import time
 
-
 class Console:
-    """Different Functions for interating with the console"""
+    """Different Functions for interacting with the console"""
 
     def __init__(self):
         self.escape_sequence = '\033[{}m'
@@ -18,7 +28,7 @@ class Console:
             'white': 37
             }
 
-    def clear(self, delay):
+    def clear(self, delay = 0):
         """
         Clears Console after delay.
 
@@ -36,7 +46,7 @@ class Console:
             text (str): The text to colorize.
             color (str): The desired text color. Default is 'white'.
             bold (bool): Whether to make the text bold. Default is False.
-
+            
         Returns:
             str: The colorized text.
         """
