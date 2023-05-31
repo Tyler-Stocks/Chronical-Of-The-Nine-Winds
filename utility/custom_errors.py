@@ -46,13 +46,13 @@ class InputErrors:
             print('\nInput must be alphabetic.\n')
             console.clear(1)
         elif data_type.lower() in ('int', 'float'):
-            print('Input must be a number.\n')
+            print('Input must be a real number.\n')
             console.clear(1)
         elif data_type.lower() == 'bool':
-            print('Input must be Trule/False or 1/0.\n')
+            print('Input must be a boolean value (True/False)\n')
             console.clear(1)
         else:
-            pass
+            raise TypeError
 
     def whitespace(self):
         """Prints error if there is no input."""
@@ -69,5 +69,3 @@ class InputErrors:
         """
         print(f'Input value must be between {low_bound}, and {high_bound}.\n')
         console.clear(1)
-
-

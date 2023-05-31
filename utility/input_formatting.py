@@ -11,7 +11,7 @@ Structure:
 """
 import math
 class InputUtility:
-    """Class for Import Utility"""
+    """Class for Input Utility"""
 
     def __init__(self):
         pass
