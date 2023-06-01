@@ -3,11 +3,11 @@ The 'console' module allows for you to interact with the console in different wa
 Structure:
 Console
 |
-|--__init__(self)
+|--__init__(self) -> None
 |
-|--clear(self, delay = 0)
+|--clear(self, delay(int | float) = 0) -> None
 |
-|--color_test(self, text, color = 'white', bold = 'false')
+|--color_test(self, text(str), color(str) = 'white', bold(bool) = False) -> str
 """
 
 import time
@@ -15,7 +15,7 @@ import time
 class Console:
     """Different Functions for interacting with the console"""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.escape_sequence = '\033[{}m'
         self.colors = {
             'black': 30,
@@ -28,7 +28,7 @@ class Console:
             'white': 37
             }
 
-    def clear(self, delay = 0):
+    def clear(self, delay: int | float = 0 ) -> None:
         """
         Clears Console after delay.
 
@@ -38,7 +38,7 @@ class Console:
         time.sleep(delay)
         print('\033[H\033[J', end='')
 
-    def color_text(self, text, color = 'white', bold = 'false'):
+    def color_text(self, text: str, color: str = 'white', bold: bool = False) -> str:
         """
         Colorizes the given text using ANSI escape sequences.
 
@@ -46,7 +46,7 @@ class Console:
             text (str): The text to colorize.
             color (str): The desired text color. Default is 'white'.
             bold (bool): Whether to make the text bold. Default is False.
-            
+
         Returns:
             str: The colorized text.
         """

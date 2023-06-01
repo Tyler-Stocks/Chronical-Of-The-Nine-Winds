@@ -3,12 +3,11 @@ Class for error handling.
 Structure:
 ErrorHandling
 |
-|--__init__(self)
+|--__init__(self) -> None
 |
-|--string_error_handler(self, user_input, length, white_space_is_valid = False)
+|--string_error_handler(self, user_input(str), length(int | float), white_space_is_valid(bool) = False) -> bool
 |
-|--int_error_handler(self, user_input, lower_bound, upper_bound, white_space_is_valid = False)
-|
+|--int_error_handler(self, user_input(int), lower_bound(int | float), upper_bound(int | float), white_space_is_valid(bool) = False) -> bool
 """
 from utility import custom_errors
 
@@ -17,10 +16,10 @@ error = custom_errors.InputErrors()
 class ErrorHandling:
     """Class for error handling."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         pass
 
-    def string_error_handler(self, user_input, length, white_space_is_valid = False):
+    def string_error_handler(self, user_input: str, length: int | float, white_space_is_valid: bool = False) -> bool:
         """
         Function for string error handling.
 
@@ -53,7 +52,7 @@ class ErrorHandling:
 
         return error_occured
 
-    def int_error_hander(self, user_input, lower_bound, upper_bound, white_space_is_valid = False):
+    def int_error_hander(self, user_input: str, lower_bound: int | float, upper_bound: int | float, white_space_is_valid: bool = False) -> bool:
         """
         Function for integer error handling.
 
@@ -74,7 +73,7 @@ class ErrorHandling:
         elif user_input.isalpha():
             error.type('int')
             error_occured = True
-        elif lower_bound > user_input > upper_bound:
+        elif lower_bound > int(user_input) > upper_bound:
             error.range(lower_bound, upper_bound)
             error_occured = True
         else:

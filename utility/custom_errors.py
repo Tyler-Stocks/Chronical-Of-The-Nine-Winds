@@ -2,17 +2,15 @@
 Custom Errors
 InputErrors
 |
-|--__init__(self)
+|--__init__(self) -> None
 |
-|--length_error(self, length)
+|--length_error(self, length(int | float)) -> None
 |
-|--type_error(self, data_type)
+|--type_error(self, data_type(str)) -> None
 |
-|--whitespace_error(self)
+|--whitespace_error(self) -> None
 |
-|--range_error(self, low_bound, high_bound)
-|
-|--invalid_input(self, type, message, is_binary = False)
+|--range_error(self, low_bound(int | float), high_bound(int | float)) -> None
 
 """
 from utility import console as util
@@ -22,10 +20,10 @@ console = util.Console()
 class InputErrors:
     """Handles Input Errors."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         pass
 
-    def length(self, length):
+    def length(self, length: int | float) -> None:
         """
         Prints error message if input length is too long.
 
@@ -35,7 +33,7 @@ class InputErrors:
         print(f'Input cannot be longer than {length}.\n')
         console.clear(1)
 
-    def type(self, data_type):
+    def type(self, data_type: str) -> None:
         """
         Prints error if the input is of the wrong data type.
 
@@ -54,12 +52,12 @@ class InputErrors:
         else:
             raise TypeError
 
-    def whitespace(self):
+    def whitespace(self) -> None:
         """Prints error if there is no input."""
         print('Must provide input.\n')
         console.clear(1)
 
-    def range(self, low_bound, high_bound):
+    def range(self, low_bound: int | float, high_bound: int | float) -> None:
         """
         Prints error if an input if out of range.
 
