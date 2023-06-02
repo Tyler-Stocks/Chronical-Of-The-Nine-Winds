@@ -5,9 +5,9 @@ ErrorHandling
 |
 |--__init__(self) -> None
 |
-|--string_error_handler(self, user_input(str), length(int | float), white_space_is_valid(bool) = False) -> bool
+|--string_error_handler(self, user_input(str), length(int,float), white_space_is_valid(bool) = False) -> bool
 |
-|--int_error_handler(self, user_input(int), lower_bound(int | float), upper_bound(int | float), white_space_is_valid(bool) = False) -> bool
+|--int_error_handler(self, user_input(int), lower_bound(int, float), upper_bound(int, float), white_space_is_valid(bool) = False) -> bool
 """
 from utility import custom_errors
 
@@ -19,7 +19,12 @@ class ErrorHandling:
     def __init__(self) -> None:
         pass
 
-    def string_error_handler(self, user_input: str, length: int | float, white_space_is_valid: bool = False) -> bool:
+    def string_error_handler(
+            self,
+            user_input: str,
+            length: int | float,
+            white_space_is_valid: bool = False
+        ) -> bool:
         """
         Function for string error handling.
 
@@ -52,7 +57,13 @@ class ErrorHandling:
 
         return error_occured
 
-    def int_error_hander(self, user_input: str, lower_bound: int | float, upper_bound: int | float, white_space_is_valid: bool = False) -> bool:
+    def int_error_hander(
+            self,
+            user_input: str,
+            lower_bound: int | float,
+            upper_bound: int | float,
+            white_space_is_valid: bool = False
+        ) -> bool:
         """
         Function for integer error handling.
 

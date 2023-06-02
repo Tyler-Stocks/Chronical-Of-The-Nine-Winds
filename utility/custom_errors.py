@@ -4,13 +4,13 @@ InputErrors
 |
 |--__init__(self) -> None
 |
-|--length_error(self, length(int | float)) -> None
+|--length_error(self, length(int, float)) -> None
 |
 |--type_error(self, data_type(str)) -> None
 |
 |--whitespace_error(self) -> None
 |
-|--range_error(self, low_bound(int | float), high_bound(int | float)) -> None
+|--range_error(self, low_bound(int, float), high_bound(int, float)) -> None
 
 """
 from utility import console as util
@@ -23,7 +23,10 @@ class InputErrors:
     def __init__(self) -> None:
         pass
 
-    def length(self, length: int | float) -> None:
+    def length(
+            self,
+            length: int | float
+            ) -> None:
         """
         Prints error message if input length is too long.
 
@@ -33,7 +36,10 @@ class InputErrors:
         print(f'Input cannot be longer than {length}.\n')
         console.clear(1)
 
-    def type(self, data_type: str) -> None:
+    def type(
+            self,
+            data_type: str
+            ) -> None:
         """
         Prints error if the input is of the wrong data type.
 
@@ -57,7 +63,10 @@ class InputErrors:
         print('Must provide input.\n')
         console.clear(1)
 
-    def range(self, low_bound: int | float, high_bound: int | float) -> None:
+    def range(self,
+              low_bound: int | float,
+              high_bound: int | float
+              ) -> None:
         """
         Prints error if an input if out of range.
 

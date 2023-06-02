@@ -28,7 +28,10 @@ class Console:
             'white': 37
             }
 
-    def clear(self, delay: int | float = 0 ) -> None:
+    def clear(
+            self,
+            delay: int | float = 0
+            ) -> None:
         """
         Clears Console after delay.
 
@@ -38,7 +41,12 @@ class Console:
         time.sleep(delay)
         print('\033[H\033[J', end='')
 
-    def color_text(self, text: str, color: str = 'white', bold: bool = False) -> str:
+    def color_text(
+            self,
+            text: str,
+            color: str = 'white',
+            bold: bool = False
+            ) -> str:
         """
         Colorizes the given text using ANSI escape sequences.
 

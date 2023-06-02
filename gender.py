@@ -9,9 +9,7 @@ Structure:
     |
     |--input_custom_gender(self) -> None
     |
-    |--input_first_pronoun(self) -> None
-    |
-    |--input_second_pronoun(self) -> None
+    |--input_pronouns(self) -> None
     |
     |--get_gender(self) -> None
     |
@@ -66,55 +64,23 @@ class Gender:
             self.gender = input('What is the name of your gender? ')
             error_occured = errors.string_error_handler(self.gender, 20)
 
-    def input_first_pronoun(self) -> None:
+    def input_pronouns(self) -> None:
         """Have user input first pronouns."""
         console.clear()
-
         error_occured = True
 
         while error_occured:
             self.pronoun_one = input('What is your fist pronoun? ')
             error_occured = errors.string_error_handler(self.pronoun_one, 20)
 
-    def input_second_pronoun(self):
-        """Have user input second pronoun"""
         console.clear()
-
         error_occured = True
 
         while error_occured:
             self.pronoun_two = input('What is your second pronoun? ')
             error_occured = errors.string_error_handler(self.pronoun_two, 20)
 
-    # Goofy ahh function, pls fix soon, also fix check_for_valid_input cause it kinda sucks ass and probably doesn't even work.
-    def get_gender(self) -> None:
-        """Function to get the users gender."""
-        console.clear()
-
-        valid_gender_values = [inputValues.valid_boy_values, inputValues.valid_girl_values, 'other']
-
-        while True:
-            self.input_gender()
-            if inputs.check_for_valid_input(self.gender, valid_gender_values, 'Input must be boy girl or other') and self.gender == 'Other':
-                self.input_custom_gender()
-                if inputs.confirmation(self.gender):
-                    self.input_first_pronoun()
-                    if inputs.confirmation(self.pronoun_one):
-                        self.input_second_pronoun()
-                        if inputs.confirmation(self.pronoun_two):
-                            self.format()
-                            self.save()
-                            break
-            elif inputs.check_for_valid_input(self.gender, valid_gender_values, 'Input must be boy girl or other') and self.gender != 'Other':
-                if inputs.confirmation(self.gender):
-                    self.assign_pronouns()
-                    self.format()
-                    self.save()
-                    break
-            elif not inputs.check_for_valid_input(self.gender, valid_gender_values, 'Input must be boy girl or other'):
-                continue
-            else:
-                raise TypeError
+        print(f'{self.pronoun_one}{self.pronoun_two}')
 
     def assign_pronouns(self) -> None:
         """Assign pronouns based on user input."""

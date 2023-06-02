@@ -22,7 +22,10 @@ class HandleUserInput:
     def __init__(self) -> None:
         pass
 
-    def confirmation(self, user_input: str | int | float | bool | list) -> bool:
+    def confirmation(
+            self,
+            user_input: str | int | float | bool | list
+            ) -> bool:
         console.clear()
 
         while True:
@@ -35,7 +38,11 @@ class HandleUserInput:
             else:
                 self.invalid_input('Input must be either "Yes", or "No".', True)
 
-    def invalid_input(self, message: str, is_binary: bool = False) -> None:
+    def invalid_input(
+            self,
+            message: str,
+            is_binary: bool = False
+            ) -> None:
         """Prints Error if an input is invalid."""
         if is_binary:
             print('Input must be "Yes", or "No".')
@@ -44,7 +51,12 @@ class HandleUserInput:
             print(f'{message}')
             console.clear(1)
 
-    def check_for_valid_input(self, user_input: str | int | float, valid_input_values: list, message: str) -> bool:
+    def check_for_valid_input(
+            self,
+            user_input: str | int | float,
+            valid_input_values: list,
+            message: str
+            ) -> bool:
         """Check for valid user input."""
         console.clear()
         if user_input in(valid_input_values):

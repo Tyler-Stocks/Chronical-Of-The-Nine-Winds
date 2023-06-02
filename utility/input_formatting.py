@@ -16,7 +16,10 @@ class InputUtility:
     def __init__(self):
         pass
 
-    def string(self, user_input: str) -> str:
+    def string(
+            self,
+            user_input: str
+            ) -> str:
         """
         Takes in user input, then returns a formatted version.
 
@@ -31,7 +34,12 @@ class InputUtility:
 
         return user_input
 
-    def integer(self, user_input: int | float, round_type: str, data_type: str) -> int | float:
+    def integer(
+            self,
+            user_input: int | float,
+            round_type: str,
+            data_type: str
+            ) -> int | float:
         """
         Takes in integer input, then formats it.
 
