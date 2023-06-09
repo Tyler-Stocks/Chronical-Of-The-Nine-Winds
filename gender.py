@@ -5,11 +5,11 @@ Structure:
     |
     |--__init__(self) -> None
     |
-    |--input_gender(self) -> None
+    |--input_gender(self) -> self.gender(str)
     |
-    |--input_custom_gender(self) -> None
+    |--input_custom_gender(self) -> self.gender(str)
     |
-    |--input_pronouns(self) -> None
+    |--input_pronouns(self) -> self.pronoun_one, self.pronoun_two(tuple(str, str))
     |
     |--get_gender(self) -> None
     |
@@ -43,18 +43,26 @@ class Gender:
         self.declaration = ''
         self.confirm = ''
 
-    def input_gender(self) -> None:
+    def input_gender(self) -> str:
         """Have user input their first name"""
         console.clear()
-
         error_occured = True
 
         while error_occured:
             self.gender = input('What gender are you? Boy, Girl, or Other: ')
             error_occured = errors.string_error_handler(self.gender, 20)
 
+        return self.gender
 
-    def input_custom_gender(self) -> None:
+    def get_gender(self) -> None:
+        """Get user gender information."""
+        console.clear()
+        has_confirmed = False
+
+        while has_confirmed:
+            self.input_gender
+
+    def input_custom_gender(self) -> str:
         """Have user input custom gender."""
         console.clear()
 
@@ -64,7 +72,9 @@ class Gender:
             self.gender = input('What is the name of your gender? ')
             error_occured = errors.string_error_handler(self.gender, 20)
 
-    def input_pronouns(self) -> None:
+        return self.gender
+
+    def input_pronouns(self) -> tuple:
         """Have user input first pronouns."""
         console.clear()
         error_occured = True
@@ -80,7 +90,7 @@ class Gender:
             self.pronoun_two = input('What is your second pronoun? ')
             error_occured = errors.string_error_handler(self.pronoun_two, 20)
 
-        print(f'{self.pronoun_one}{self.pronoun_two}')
+        return self.pronoun_one, self.pronoun_two
 
     def assign_pronouns(self) -> None:
         """Assign pronouns based on user input."""
