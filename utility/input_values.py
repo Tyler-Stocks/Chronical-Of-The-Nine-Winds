@@ -9,6 +9,7 @@ class InputValues:
     valid_girl_values = ['f', 'girl', 'gal', 'woman', 'female']
 
     def __init__(self) -> None:
+        # Lean wit me, pop with me
         pass
 
     def yes_values(self, user_input: str) -> bool:

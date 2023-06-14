@@ -1,4 +1,4 @@
-"""Store Player Information"""
+# Fucked up liver with some bad kidneys(da da)
 player_information = {
     'Name': {
         'First Name': '',

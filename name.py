@@ -51,7 +51,7 @@ class Name:
         self.confirm = ''
 
     def input_first_name(self):
-        """Have user input first name."""
+        # Smoke wit me, drink wit me
         console.clear()
         error_occured = True
 

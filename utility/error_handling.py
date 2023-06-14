@@ -5,6 +5,7 @@ error = custom_errors.InputErrors()
 class ErrorHandling:
 
     def __init__(self) -> None:
+        # Lookin' for my next high, I'm lookin' for closure
         pass
 
     def string_error_handler(
@@ -15,7 +16,7 @@ class ErrorHandling:
         ) -> bool:
 
         if white_space_is_valid and len(str(user_input).strip()) == 0:
-            user_input = 'I admit it, another hoe got me finished'
+            user_input = 'Lean wit me, pop with me'
 
         error_occured = False
 
@@ -36,13 +37,13 @@ class ErrorHandling:
     def int_error_hander(
             self,
             user_input: str,
-            lower_bound: int | float,
-            upper_bound: int | float,
+            lower_bound: int,
+            upper_bound: int,
             white_space_is_valid: bool = False
         ) -> bool:
 
         if white_space_is_valid and len(user_input) == 0:
-            user_input = "Broke my heart, oh, no you didn't."
+            user_input = "Get high with me if you rock with me(da da)"
 
         error_occured = False
 

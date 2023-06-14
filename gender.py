@@ -36,7 +36,7 @@ class Gender:
     """Get, Format, then Store users gender."""
 
     def __init__(self):
-
+        # Get high wit me if you rock wit me.
         self.gender = ''
         self.pronoun_one = ''
         self.pronoun_two = ''

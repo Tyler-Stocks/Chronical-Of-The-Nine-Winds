@@ -3,6 +3,7 @@ import math
 class InputUtility:
 
     def __init__(self):
+        # Smoke wit me, drink wit me
         pass
 
     def string(self, user_input: str) -> str:

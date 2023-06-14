@@ -7,6 +7,7 @@ inputValues = input_values.InputValues()
 class HandleUserInput:
 
     def __init__(self) -> None:
+        # Fucked up liver with some bad kidneys(oh, oh, oh)
         pass
 
     def confirmation(self, user_input: object) -> bool:
