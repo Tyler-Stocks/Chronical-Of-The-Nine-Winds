@@ -1,24 +1,3 @@
-"""
-Module to get the users gender.
-Structure:
-    Gender
-    |
-    |--__init__(self) -> None
-    |
-    |--input_gender(self) -> self.gender(str)
-    |
-    |--input_custom_gender(self) -> self.gender(str)
-    |
-    |--input_pronouns(self) -> self.pronoun_one, self.pronoun_two(tuple(str, str))
-    |
-    |--get_gender(self) -> None
-    |
-    |--assign_pronouns(self) -> None
-    |
-    |--format(self) -> None
-    |
-    |--save(self) -> None
-"""
 from utility import input_values
 from utility import console as Console
 from utility import input_formatting
@@ -33,10 +12,8 @@ errors = error_handling.ErrorHandling()
 inputs = input_handling.HandleUserInput()
 
 class Gender:
-    """Get, Format, then Store users gender."""
 
     def __init__(self):
-        # Get high wit me if you rock wit me.
         self.gender = ''
         self.pronoun_one = ''
         self.pronoun_two = ''
@@ -44,7 +21,6 @@ class Gender:
         self.confirm = ''
 
     def input_gender(self) -> str:
-        """Have user input their first name"""
         console.clear()
         error_occured = True
 
@@ -55,7 +31,6 @@ class Gender:
         return self.gender
 
     def get_gender(self) -> None:
-        """Get user gender information."""
         console.clear()
         has_confirmed = False
 
@@ -63,7 +38,6 @@ class Gender:
             self.input_gender
 
     def input_custom_gender(self) -> str:
-        """Have user input custom gender."""
         console.clear()
 
         error_occured = True
@@ -75,7 +49,6 @@ class Gender:
         return self.gender
 
     def input_pronouns(self) -> tuple:
-        """Have user input first pronouns."""
         console.clear()
         error_occured = True
 
@@ -93,7 +66,6 @@ class Gender:
         return self.pronoun_one, self.pronoun_two
 
     def assign_pronouns(self) -> None:
-        """Assign pronouns based on user input."""
         if self.gender.lower() == 'boy':
             self.pronoun_one = 'He'
             self.pronoun_two = 'Him'
@@ -104,16 +76,12 @@ class Gender:
             pass
 
     def format(self) -> None:
-        """Format Gender, and Pronouns"""
         inputFormat.string(self.gender)
         inputFormat.string(self.pronoun_one)
         inputFormat.string(self.pronoun_two)
         inputFormat.string(self.declaration)
 
     def save(self) -> None:
-        """
-        Save gender in player_information dictionary
-        """
         player_information['Gender']['Name'] = self.gender
         player_information['Gender']['First Pronoun'] = self.pronoun_one
         player_information['Gender']['Second Pronoun'] = self.pronoun_two
