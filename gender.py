@@ -26,7 +26,7 @@ class Gender:
 
         while error_occured:
             self.gender = input('What gender are you? Boy, Girl, or Other: ')
-            error_occured = errors.string_error_handler(self.gender, 20)
+            error_occured = errors.string(self.gender, 20)
 
         return self.gender
 
@@ -44,7 +44,7 @@ class Gender:
 
         while error_occured:
             self.gender = input('What is the name of your gender? ')
-            error_occured = errors.string_error_handler(self.gender, 20)
+            error_occured = errors.string(self.gender, 20)
 
         return self.gender
 
@@ -54,14 +54,14 @@ class Gender:
 
         while error_occured:
             self.pronoun_one = input('What is your fist pronoun? ')
-            error_occured = errors.string_error_handler(self.pronoun_one, 20)
+            error_occured = errors.string(self.pronoun_one, 20)
 
         console.clear()
         error_occured = True
 
         while error_occured:
             self.pronoun_two = input('What is your second pronoun? ')
-            error_occured = errors.string_error_handler(self.pronoun_two, 20)
+            error_occured = errors.string(self.pronoun_two, 20)
 
         return self.pronoun_one, self.pronoun_two
 

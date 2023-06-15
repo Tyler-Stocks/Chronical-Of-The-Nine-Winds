@@ -1,3 +1,5 @@
+import keyboard as k
+
 from utility import console as Console
 from utility import input_values
 
@@ -9,17 +11,6 @@ class HandleUserInput:
     def __init__(self) -> None:
         # Fucked up liver with some bad kidneys(oh, oh, oh)
         pass
-
-    def confirmation(self, user_input: object) -> bool:
-        console.clear()
-        while True:
-            self.confirm = input(f'{user_input} is correct? ')
-            if inputValues.yes_values(self.confirm):
-                return True
-            if inputValues.no_values(self.confirm):
-                return False
-            else:
-                self.invalid_input('Input must be either Yes, or No.', True)
 
     def invalid_input(self, message: str, is_binary: bool = False) -> None:
         if is_binary:
@@ -36,3 +27,31 @@ class HandleUserInput:
         else:
             self.invalid_input(message)
             return False
+
+    def confirmation(self, user_input, message, white_space_is_valid = False):
+        console.clear()
+
+        if not white_space_is_valid:
+            while True:
+                self.confirm = input(f'{user_input} is correct (Y/N)? ')
+
+                if k.is_pressed('y'):
+                    return True
+                elif k.is_pressed('n'):
+                    return False
+                else:
+                    self.invalid_input(self.confirm, True)
+                    return False
+        else:
+            while True:
+                self.confirm = input(f'You don\'t have a {message}? ')
+
+                if k.is_pressed('y'):
+                    return True
+                elif k.is_pressed('n'):
+                    return False
+                else:
+                    self.invalid_input(self.confirm, True)
+
+    def get_input(self, message: str) -> str:
+        console.clear()

@@ -1,5 +1,3 @@
-import keyboard as k
-
 from utility import custom_errors
 from utility import input_values
 from utility import console as Console
@@ -31,39 +29,14 @@ class Name:
 
         while error_occured:
             self.first_name = input('Please input your first Name. ')
-            error_occured = errorHandling.string_error_handler(self.first_name, 20)
-
-    def confirm_input(self, user_input, message, white_space_is_valid = False):
-        console.clear()
-
-        if not white_space_is_valid:
-            while True:
-                self.confirm = input(f'{user_input} is correct (Y/N)? ')
-
-                if k.is_pressed('y'):
-                    return True
-                elif k.is_pressed('n'):
-                    return False
-                else:
-                    inputHandling.invalid_input(self.confirm, True)
-                    return False
-        else:
-            while True:
-                self.confirm = input(f'You don\'t have a {message}? ')
-
-                if k.is_pressed('y'):
-                    return True
-                elif k.is_pressed('n'):
-                    return False
-                else:
-                    inputHandling.invalid_input(self.confirm, True)
+            error_occured = errorHandling.string(self.first_name, 20)
 
     def get_first_name(self):
         console.clear()
 
         while True:
             self.input_first_name()
-            if self.confirm_input(self.first_name, 'First name'):
+            if inputHandling.confirmation(self.first_name, 'First name'):
                 break
 
         return self.first_name
@@ -74,39 +47,14 @@ class Name:
 
         while error_occured:
             self.middle_name = input('Please input your middle Name. If you don\'t have a middle name press enter. ')
-            error_occured = errorHandling.string_error_handler(self.middle_name, 100)
-
-    def confirm_middle_name(self):
-        console.clear()
-
-        while True:
-            if len(str(self.middle_name)) != 0:
-                self.confirm = input(f'{self.middle_name} is correct? ')
-
-                if inputValues.yes_values(self.confirm.lower()):
-                    return True
-                if inputValues.no_values(self.confirm.lower()):
-                    return False
-                else:
-                    inputHandling.invalid_input(self.confirm, True)
-                    return False
-            else:
-                self.confirm = input('You don\'t have a middle name? ')
-
-                if inputValues.yes_values(self.confirm.lower()):
-                    return True
-                if inputValues.no_values(self.confirm.lower()):
-                    return False
-                else:
-                    inputHandling.invalid_input(self.confirm, True)
-                    return False
+            error_occured = errorHandling.integer(self.middle_name, 100, 100)
 
     def get_middle_name(self):
         console.clear()
 
         while True:
             self.input_middle_name()
-            if self.confirm_middle_name():
+            if inputHandling.confirmation(self.middle_name, 'Middle Name'):
                 break
 
         return self.middle_name
@@ -119,23 +67,13 @@ class Name:
         while error_occured:
             self.last_name = input('Please input your last name: ')
 
-            error_occured = errorHandling.string_error_handler(self.last_name, 100)
-
-    def confirm_last_name(self):
-        console.clear()
-        while True:
-            self.confirm = input(f'{self.last_name} is correct? ')
-            if inputValues.yes_values(self.confirm):
-                return True
-            if inputValues.no_values(self.confirm):
-                return False
-            inputHandling.invalid_input(self.confirm, True)
+            error_occured = errorHandling.string(self.last_name, 100)
 
     def get_last_name(self):
         console.clear()
         while True:
             self.input_last_name()
-            if self.confirm_last_name():
+            if inputHandling.confirmation(self.last_name, 'Last Name'):
                 break
 
         return self.last_name
@@ -165,4 +103,4 @@ class Name:
         self.store()
 
 Name_Instance = Name()
-Name_Instance.get_first_name()
+Name_Instance.get_full_name()
