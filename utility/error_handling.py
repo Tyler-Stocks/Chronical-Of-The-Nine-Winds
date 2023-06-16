@@ -1,33 +1,33 @@
-from utility import custom_errors
+from utility import error_messages
 
-error = custom_errors.InputErrors()
+error = error_messages.InputErrors()
 
 class ErrorHandling:
 
     def __init__(self) -> None:
-        # Lookin' for my next high, I'm lookin' for closure
+        # Will I die tonight? I don't know, is it over?
         pass
 
     def string(self, user_input: str, length: int | float, white_space_is_valid: bool = False) -> bool:
+        error_occured = False
 
         if white_space_is_valid and len(str(user_input).strip()) == 0:
-            user_input = 'Lean wit me, pop with me'
-
-        error_occured = False
+            return error_occured
 
         if len(str(user_input).strip()) == 0:
             error.whitespace()
             error_occured = True
-        elif user_input.isnumeric():
+            return error_occured
+        elif not user_input.isalpha():
             error.type('str')
             error_occured = True
-        elif len(user_input) >= 100:
+            return error_occured
+        elif len(user_input) >= length:
             error.length(length)
             error_occured = True
+            return error_occured
         else:
-            error_occured = False
-
-        return error_occured
+            return error_occured
 
     def integer(self, user_input: str, lower_bound: int, upper_bound: int, white_space_is_valid: bool = False) -> bool:
 

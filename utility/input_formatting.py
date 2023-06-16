@@ -1,9 +1,7 @@
-import math
-
 class InputUtility:
 
     def __init__(self):
-        # Smoke wit me, drink wit me
+        # Lean wit me, pop wit me
         pass
 
     def integer(self, user_input: int | float, data_type: float) -> int | float:
@@ -12,9 +10,7 @@ class InputUtility:
         elif data_type == 'float':
             return float(user_input)
         else:
-            pass
-
-        return user_input
+            return 0
 
     def string(self, user_input: str) -> str:
-            return str(user_input).strip().capitalize()
+            return str(user_input).capitalize()

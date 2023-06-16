@@ -1,4 +1,4 @@
-# Fucked up liver with some bad kidneys(da da)
+# Lean wit me, pop wit me
 player_information = {
     'Name': {
         'First Name': '',
