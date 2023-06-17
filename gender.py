@@ -1,35 +1,40 @@
-from utility import input_formatting
-from utility import input_handling
+import json
 
-from player import player_information
+from utility import string_input_handling
 
-inputs = input_handling.HandleUserInput()
-format = input_formatting.InputUtility()
+inputs = string_input_handling.HandleStringInput()
 
 class Gender:
 
     def __init__(self):
-        # Smoke with me, drink wit me
         self.gender = ''
         self.pronoun_one = ''
         self.pronoun_two = ''
         self.declaration = ''
 
     def get_gender_information(self):
-        self.gender = format.string(inputs.get_input('gender', 20))
-        self.pronoun_one = format.string(inputs.get_input('pronoun one', 10))
-        self.pronoun_two = format.string(inputs.get_input('pronoun two', 10))
-        self.declaration = format.string(inputs.get_input('declaration', 10))
+        self.gender = inputs.get_str_input('gender', 20).capitalize()
+        self.pronoun_one = inputs.get_str_input('first pronoun', 10).capitalize()
+        self.pronoun_two = inputs.get_str_input('second pronoun', 10).capitalize()
+        self.declaration = inputs.get_str_input('declaration', 10).capitalize()
 
-    def store(self):
-        player_information['Gender']['Name'] = self.gender
-        player_information['Gender']['Pronoun One'] = self.pronoun_one
-        player_information['Gender']['Pronoun Two'] = self.pronoun_two
-        player_information['Gender']['Declaration'] = self.declaration
+    def format_gender(self) -> str:
+        gender_information = {
+            'Gender': f'{self.gender}',
+            'First Pronoun': f'{self.pronoun_one}',
+            'Second Pronoun': f'{self.pronoun_two}',
+            'Declaration': f'{self.declaration}',
+            'Gender Length': f'{len(self.gender.strip())}'
+        }
+        gender_data = json.dumps(gender_information, indent = 4)
+        return gender_data
+
+    def save(self):
+        with open('data/data.json', 'w') as f:
+            f.write(self.format_gender())
 
     def main(self):
         self.get_gender_information()
-        self.store()
 
 Gender_Obj = Gender()
 Gender_Obj.main()

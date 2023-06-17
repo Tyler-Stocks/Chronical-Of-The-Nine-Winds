@@ -1,11 +1,10 @@
-from utility import console as util
+from utility import console_utility
 
-console = util.Console()
+console = console_utility.Console()
 
 class InputErrors:
 
     def __init__(self):
-        # Looking for my next high, I'm looking for closure
         pass
 
     def length(self, length: int | float):

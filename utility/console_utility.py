@@ -3,7 +3,6 @@ import time
 class Console:
 
     def __init__(self) -> None:
-        # Lookin' at the Devil and the Angel on my shoulder.
         pass
 
     def clear(self, delay: int | float = 0):
