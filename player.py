@@ -5,7 +5,6 @@ player_information = {
         'Middle Name': '',
         'Last Name': '',
         'Length': '',
-        'Language': '',
         'Syllables': ''
     },
     'Gender': {
@@ -16,7 +15,6 @@ player_information = {
     },
     'Age': {
         'Value': 0,
-        'Value Exact': 0,
         'Life Stage': '',
     },
     'Birthday': {

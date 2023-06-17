@@ -36,6 +36,7 @@ class HandleUserInput:
 
     def user_input(self, message: str, max_len: int) -> str:
         console.clear()
+
         error_occured = True
         user_input = ''
 
@@ -43,5 +44,15 @@ class HandleUserInput:
             user_input = input(f'Please enter your {message}: ')
             print(user_input)
             error_occured = errorHandling.string(user_input, max_len)
+        return user_input
 
+    def get_input(self, message: str, max_len: int) -> str:
+        console.clear()
+
+        user_input = ''
+
+        while True:
+            user_input = self.user_input(message, 50)
+            if self.confirmation(user_input):
+                break
         return user_input
