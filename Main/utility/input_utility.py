@@ -1,6 +1,6 @@
-from utility import console_utility, error_messages
+from Utility import console_util, error_messages
 
-console = console_utility.Console()
+console = console_util.Console()
 error = error_messages.InputErrors()
 
 class InputUtility:

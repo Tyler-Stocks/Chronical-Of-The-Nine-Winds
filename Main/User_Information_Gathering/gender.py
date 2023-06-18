@@ -1,8 +1,7 @@
 import json
+import Main.Utility.string_input_handling
 
-from utility import string_input_handling
-
-inputs = string_input_handling.HandleStringInput()
+inputs = Main.Utility.string_input_handling.HandleStringInput()
 
 class Gender:
 

@@ -1,7 +1,7 @@
 import json
-from utility import integer_input_handling
+import Main.Utility.integer_input_handling
 
-inputs = integer_input_handling.HandleIntegerInput()
+inputs = Main.Utility.integer_input_handling.HandleIntegerInput()
 
 class Age:
 

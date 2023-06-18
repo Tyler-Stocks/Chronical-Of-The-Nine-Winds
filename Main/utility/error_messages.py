@@ -1,6 +1,6 @@
-from utility import console_utility
+from Utility import console_util
 
-console = console_utility.Console()
+console = console_util.Console()
 
 class InputErrors:
 
