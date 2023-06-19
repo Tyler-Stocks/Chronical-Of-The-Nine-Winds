@@ -1,7 +1,7 @@
 import json
-import Main.Utility.string_input_handling
+import Main.utility.string_input_handling
 
-inputs = Main.Utility.string_input_handling.HandleStringInput()
+inputs = Main.utility.string_input_handling.HandleStringInput()
 
 class Name:
 

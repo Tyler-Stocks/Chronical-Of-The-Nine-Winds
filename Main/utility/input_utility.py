@@ -1,9 +1,9 @@
-from Utility import console_util, error_messages
+from utility import console_util, error_messages
 
 console = console_util.Console()
 error = error_messages.InputErrors()
 
-class InputUtility:
+class Inpututility:
 
     def __init__(self):
         pass
