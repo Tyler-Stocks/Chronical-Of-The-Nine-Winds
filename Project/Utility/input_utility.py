@@ -1,7 +1,7 @@
-from utility import console_util, error_messages
+import Project.Utility.console_util, Project.Utility.error_messages
 
-console = console_util.Console()
-error = error_messages.InputErrors()
+console = Project.Utility.console_util.Console()
+error   = Project.Utility.error_messages.InputErrors()
 
 class Inpututility:
 
@@ -12,7 +12,7 @@ class Inpututility:
         console.clear()
 
         while True:
-            confirm = input(f'{user_input} is correct(Y/N)?\n')
+            confirm: str = input(f'{user_input} is correct(Y/N)?\n')
 
             if confirm.lower() == 'y':
                 return True

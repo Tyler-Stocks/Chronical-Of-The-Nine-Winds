@@ -1,17 +1,17 @@
-from utility import console_util
+import Project.Utility.console_util
 
-console = console_util.Console()
+console = Project.Utility.console_util.Console()
 
 class InputErrors:
 
     def __init__(self):
         pass
 
-    def length(self, length: int | float):
+    def length(self, length: int | float) -> None:
         print(console.color_text(f'Error! Input cannot be longer than {length}.', 255, 0, 0))
         console.clear(2)
 
-    def type(self, data_type: str):
+    def type(self, data_type: str) -> None:
         if data_type.lower() == 'str':
             print(console.color_text('Error! Input must be alphabetical.', 255, 0, 0))
             console.clear(2)
@@ -24,11 +24,11 @@ class InputErrors:
         else:
             print(console.color_text('Error! Input is invalid type.'), 255, 0, 0)
 
-    def whitespace(self):
+    def whitespace(self) -> None:
         print(console.color_text('Error! Must Provide Input.', 255, 0, 0))
         console.clear(1)
 
-    def range(self, low_bound: int | float, high_bound: int | float):
+    def range(self, low_bound: int | float, high_bound: int | float) -> None:
         print(console.color_text(f'Error! input must be in range {low_bound} - {high_bound}.', 255, 0, 0))
         console.clear(1)
 
