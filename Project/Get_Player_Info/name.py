@@ -1,7 +1,7 @@
 import json
-import Project.Utility.string_input_handling
+from Project.Utility import string_input_handling
 
-inputs = Project.Utility.string_input_handling.HandleStringInput()
+inputs = string_input_handling.HandleStringInput()
 
 class Name:
 
@@ -29,11 +29,11 @@ class Name:
         return name_data
 
     def store(self) -> None:
-        with open('data/data.json', 'w') as f:
+        with open('data/name_data.json', 'w') as f:
             f.write(self.format_name())
 
     def main(self) -> None:
         self.get_name()
         self.store()
 
-Name_Obj = Name().main()
+Name().main()

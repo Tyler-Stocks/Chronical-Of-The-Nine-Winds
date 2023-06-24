@@ -1,7 +1,7 @@
-import Project.Utility.console_util, Project.Utility.error_messages
+from Project.Utility import console_util, error_messages
 
-console = Project.Utility.console_util.Console()
-error   = Project.Utility.error_messages.InputErrors()
+console = console_util.Console()
+error   = error_messages.InputErrors()
 
 class Inpututility:
 

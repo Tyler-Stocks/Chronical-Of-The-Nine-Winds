@@ -1,3 +1,3 @@
-import Project.Get_Player_Info.main
+from Project.Get_Player_Info import main
 
-Run = Project.Get_Player_Info.main.GetUserInformation_Obj
+main.GetUserInformation()

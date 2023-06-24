@@ -1,6 +1,6 @@
-import Project.Utility.error_messages
+from Project.Utility import error_messages
 
-error = Project.Utility.error_messages.InputErrors()
+error = error_messages.InputErrors()
 
 class ErrorHandling:
 
@@ -18,7 +18,7 @@ class ErrorHandling:
             error_occured: bool = True
             return error_occured
         elif not user_input.isalpha():
-            error.type('str')
+            error.type('Input must be alphabetical')
             error_occured: bool = True
             return error_occured
         elif len(user_input) >= length:
@@ -40,7 +40,7 @@ class ErrorHandling:
             error_occured = True
             return error_occured
         elif user_input.isalpha():
-            error.type('int')
+            error.type('Input must be an integer.')
             error_occured = True
             return error_occured
         elif lower_bound > int(user_input) > upper_bound:

@@ -1,4 +1,4 @@
-import Project.gather_user_information.age, Project.gather_user_information.name, Project.gather_user_information.gender
+from Project.Get_Player_Info import age, name, gender
 
 class GetUserInformation:
 
@@ -6,8 +6,8 @@ class GetUserInformation:
         pass
 
     def main(self) -> None:
-        Age = Project.gather_user_information.age.Age()
-        Name = Project.gather_user_information.name.Name()
-        Gender = Project.gather_user_information.gender.Gender()
+        age.Age()
+        name.Name()
+        gender.Gender()
 
-GetUserInformation_Obj = GetUserInformation().main()
+GetUserInformation()

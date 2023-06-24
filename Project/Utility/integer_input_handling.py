@@ -1,9 +1,9 @@
-import Project.Utility.input_utility, Project.Utility.error_messages,  Project.Utility.error_handling, Project.Utility.console_util
+from Project.Utility import input_utility, error_messages, error_handling, console_util
 
-inputs        = Project.Utility.input_utility.Inpututility()
-error         = Project.Utility.error_messages.InputErrors()
-errorHandling = Project.Utility.error_handling.ErrorHandling()
-console       = Project.Utility.console_util.Console()
+inputs        = input_utility.Inpututility()
+error         = error_messages.InputErrors()
+errorHandling = error_handling.ErrorHandling()
+console       = console_util.Console()
 
 class HandleIntegerInput:
 
