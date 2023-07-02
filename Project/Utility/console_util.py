@@ -11,4 +11,4 @@ class Console:
         os.system('cls')
 
     def color_text(self, text: str, r: int = 255, g: int = 255, b: int = 255) -> str:
-        return f"\033[38;2;{r};{g};{b}m{text}\033[0m"
+        return f'\033[38;2;{r};{g};{b}m{text}\033[0m'

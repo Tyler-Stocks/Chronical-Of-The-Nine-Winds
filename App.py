@@ -1,3 +1,3 @@
-from Project.Get_Player_Info import main
+from Project.Get_Info import main
 
 main.GetUserInformation()

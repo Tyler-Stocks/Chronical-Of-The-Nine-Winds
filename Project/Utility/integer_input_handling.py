@@ -14,10 +14,10 @@ class HandleIntegerInput:
         console.clear()
 
         error_occured: bool = True
-        user_input: int = 0
+        user_input: int     = 0
 
         while error_occured:
-            user_input: int     = int(input(f'What is your {message}?\n'))
+            user_input: int     = int(input(f'{message}\n'))
             error_occured: bool = errorHandling.integer(user_input, lower_bound, upper_bound)
         return int(user_input)
 

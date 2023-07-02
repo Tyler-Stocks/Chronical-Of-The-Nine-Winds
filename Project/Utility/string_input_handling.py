@@ -17,7 +17,7 @@ class HandleStringInput:
         user_input: str     = ''
 
         while error_occured:
-            user_input: str     = input(f'What is your {message}?\n')
+            user_input: str     = input(f'{message}\n')
             error_occured: bool = errorHandling.string(user_input, max_len)
         return user_input
 
