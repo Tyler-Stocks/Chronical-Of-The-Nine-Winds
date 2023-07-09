@@ -6,4 +6,4 @@ class GetUserInformation:
         pass
 
     def main(self) -> None:
-        get_user_info.main()
+        get_user_info.Get_Info()
