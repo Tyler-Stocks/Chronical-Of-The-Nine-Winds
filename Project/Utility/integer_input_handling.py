@@ -1,33 +1,29 @@
 from Project.Utility import input_utility, error_messages, error_handling, console_util
 
-inputs        = input_utility.Inpututility()
-error         = error_messages.InputErrors()
+inputs = input_utility.Inpututility()
+error = error_messages.InputErrors()
 errorHandling = error_handling.ErrorHandling()
-console       = console_util.Console()
+console = console_util.Console()
 
-class HandleIntegerInput:
+class IntInput:
 
     def __init__(self):
-        pass
+        self.user_input = 0
+        self.error_occured = True
 
-    def user_int_input(self, message: str, lower_bound: int, upper_bound: int) -> int:
+    def inputs(self, message, lower_bound, upper_bound) -> int:
         console.clear()
 
-        error_occured: bool = True
-        user_input: int     = 0
+        while self.error_occured:
+            self.user_input = int(input(f'{message}\n'))
+            self.error_occured = errorHandling.integer(self.user_input, lower_bound, upper_bound)
+        return self.user_input
 
-        while error_occured:
-            user_input: int     = int(input(f'{message}\n'))
-            error_occured: bool = errorHandling.integer(user_input, lower_bound, upper_bound)
-        return int(user_input)
-
-    def get_int_input(self, message: str, lower_bound: int, upper_bound: int) -> int:
+    def get(self, message, lower_bound, upper_bound) -> int:
         console.clear()
-
-        user_input: int = 0
 
         while True:
-            user_input = self.user_int_input(message, lower_bound, upper_bound)
-            if inputs.confirm(user_input):
+            self.user_input = self.inputs(message, lower_bound, upper_bound)
+            if inputs.confirm(self.user_input):
                 break
-        return user_input
+        return self.user_input

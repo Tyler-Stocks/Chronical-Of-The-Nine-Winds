@@ -1,34 +1,55 @@
 import json
-from Project.Utility import integer_input_handling, string_input_handling
+from Project.Utility import integer_input_handling, string_input_handling, console_util
 
-integer = integer_input_handling.HandleIntegerInput()
-string = string_input_handling.HandleStringInput()
+console = console_util.Console()
+integer = integer_input_handling.IntInput()
+string = string_input_handling.StrInput()
 
-class Get_Info:
+class Get_User_Info:
     def __init__(self):
-        pass
+        self.age_info = ''
+        self.gender_info = ''
+        self.name_info = ''
+        self.user_info = ''
 
-    def get_age(self) -> str:
-        return json.dumps({'Age': integer.get_int_input('How old are you?', 0, 110)}, indent = 4)
+    def age(self) -> str:
+        self.age_info = json.dumps({'Age': integer.get('How old are you?', 0, 110)})
+        return self.age_info
 
-    def get_gender(self) -> str:
-        return json.dumps({
-            'Gender': string.get_str_input('What is your gender?', 20).capitalize(),
-            'First Pronoun': string.get_str_input('What is your first pronoun?', 10).capitalize(),
-            'Second Pronoun': string.get_str_input('What is your second pronoun?', 10).capitalize(),
-            }, indent = 4)
+    def gender(self) -> str:
+        self.gender_info = json.dumps({
+            'Gender': string.get('What is your gender?', 20).capitalize(),
+            'First Pronoun': string.get('What is your first pronoun?', 10).capitalize(),
+            'Second Pronoun': string.get('What is your second pronoun?', 10).capitalize(),
+            })
+        return self.gender_info
 
-    def get_name(self) -> str:
-        return json.dumps({
-            'First Name': string.get_str_input('What is your first name?', 50).capitalize(),
-            'Middle Name': string.get_str_input('What is your middle name?', 50).capitalize(),
-            'Last Name': string.get_str_input('What is your last name?', 50).capitalize(),
-            }, indent = 4)
+    def name(self) -> str:
+        self.name_info = json.dumps({
+            'First Name': string.get('What is your first name?', 50).capitalize(),
+            'Middle Name': string.get('What is your middle name?', 50).capitalize(),
+            'Last Name': string.get('What is your last name?', 50).capitalize(),
+            })
+        return self.name_info
+
+    def format(self) -> None:
+        self.user_info = json.dumps({
+            'Name Information': self.name_info,
+            'Gender Information': self.gender_info,
+            'Age Information': self.age_info,
+        })
+
+    def store(self) -> None:
+        with open('data/data.json', 'w') as f:
+            f.write(self.user_info)
+            f.close()
 
     def main(self) -> None:
-        with open('data/user_info.json') as f:
-            f.write(self.get_age())
-            f.write(self.get_gender())
-            f.write(self.get_name())
+        self.age()
+        self.name()
+        self.gender()
+        self.format()
+        self.store()
+        console.clear()
 
-Get_Info().main()
+Get_User_Info().main()

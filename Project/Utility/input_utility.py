@@ -12,11 +12,11 @@ class Inpututility:
         console.clear()
 
         while True:
-            confirm: str = input(f'{user_input} is correct(Y/N)?\n')
+            confirm = input(f'{user_input} is correct(Y/N)?\n')
 
-            if confirm.lower() == 'y':
+            if confirm.lower() in('y', 'yes'):
                 return True
-            elif confirm.lower() == 'n':
+            elif confirm.lower() in('n', 'no'):
                 return False
             else:
                 error.invalid_binary_input(confirm)

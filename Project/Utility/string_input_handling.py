@@ -1,33 +1,29 @@
 from Project.Utility import input_utility, error_messages, error_handling, console_util
 
-inputs        = input_utility.Inpututility()
-error         = error_messages.InputErrors()
+inputs = input_utility.Inpututility()
+error = error_messages.InputErrors()
 errorHandling = error_handling.ErrorHandling()
-console       = console_util.Console()
+console = console_util.Console()
 
-class HandleStringInput:
+class StrInput:
 
     def __init__(self) -> None:
-        pass
+        self.user_input = ''
 
-    def user_str_input(self, message: str, max_len: int) -> str:
+    def inputs(self, message, max_len) -> str:
         console.clear()
-
-        error_occured: bool = True
-        user_input: str     = ''
+        error_occured = True
 
         while error_occured:
-            user_input: str     = input(f'{message}\n')
-            error_occured: bool = errorHandling.string(user_input, max_len)
-        return user_input
+            self.user_input = input(f'{message}\n')
+            error_occured = errorHandling.string(self.user_input, max_len)
+        return self.user_input
 
-    def get_str_input(self, message: str, max_len: int) -> str:
+    def get(self, message: str, max_len: int) -> str:
         console.clear()
 
-        user_input: str = ''
-
         while True:
-            user_input: str = self.user_str_input(message, max_len)
-            if inputs.confirm(user_input):
+            self.user_input = self.inputs(message, max_len)
+            if inputs.confirm(self.user_input):
                 break
-        return user_input
+        return self.user_input

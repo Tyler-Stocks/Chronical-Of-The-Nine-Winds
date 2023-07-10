@@ -7,47 +7,35 @@ class ErrorHandling:
     def __init__(self):
         pass
 
-    def string(self, user_input: str, length: int | float, white_space_is_valid: bool = False) -> bool:
-        error_occured: bool = False
+    def string(self, user_input, length, white_space_is_valid = False) -> bool:
+        error_occured = False
 
         if white_space_is_valid and len(str(user_input).strip()) == 0:
-            return error_occured
-
+            pass
         if len(str(user_input).strip()) == 0:
             error.whitespace()
-            error_occured: bool = True
-            return error_occured
+            error_occured = True
         elif not user_input.isalpha():
             error.type('Input must be alphabetical')
-            error_occured: bool = True
-            return error_occured
+            error_occured = True
         elif len(user_input) >= length:
             error.length(length)
-            error_occured: bool = True
-            return error_occured
-        else:
-            return error_occured
+            error_occured = True
+        return error_occured
 
-    def integer(self, user_input: int | str, lower_bound: int, upper_bound: int, white_space_is_valid: bool = False) -> bool:
-        error_occured: bool = False
-        user_input = str(user_input)
+    def integer(self, user_input, lower_bound, upper_bound, white_space_is_valid = False) -> bool:
+        error_occured = False
 
-        if white_space_is_valid and len(user_input) == 0:
-            return error_occured
-
-        if len(user_input.strip()) == 0:
+        if white_space_is_valid and len(str(user_input).strip()) == 0:
+            pass
+        if len(str(user_input).strip()) == 0:
             error.whitespace()
             error_occured = True
-            return error_occured
-        elif user_input.isalpha():
+        elif str(user_input).isalpha():
             error.type('Input must be an integer.')
             error_occured = True
-            return error_occured
         elif lower_bound > int(user_input) > upper_bound:
             error.range(lower_bound, upper_bound)
             error_occured = True
-            return error_occured
-        else:
-            error_occured = False
-            return error_occured
+        return error_occured
 
