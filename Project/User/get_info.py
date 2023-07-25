@@ -1,9 +1,5 @@
 from json import dumps
-<<<<<<< HEAD
 from Project.IO.input import getStr, getInt
-=======
-from Project.Utility.input import getStr, getInt
->>>>>>> 79942298f15ae6320372664f3eb041931905a0a6
 
 def age() -> str:
     return dumps({'Age': getInt('How old are you?', 1, 100)})
