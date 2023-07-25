@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from Project.Console.format import centerText, blinkText
+=======
+from Project.Utility.console import centerText, blinkText
+>>>>>>> 79942298f15ae6320372664f3eb041931905a0a6
 
 def display_logo() -> None:
     print(centerText(fr'''
