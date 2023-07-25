@@ -6,4 +6,6 @@
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "python.formatting.provider": "none",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
 }
