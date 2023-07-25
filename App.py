@@ -1,3 +1,3 @@
-from Project.Get_Info import main
+from Project.User.get_info import get_user_info
 
-main.GetUserInformation()
+get_user_info()
