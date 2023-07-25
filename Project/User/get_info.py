@@ -1,30 +1,32 @@
 from json import dumps
-from Project.IO.input import getStr, getInt
+from Project.IO.raw_input import get_str, get_int
 
-def age() -> str:
-    return dumps({'Age': getInt('How old are you?', 1, 100)})
-
-def gender() -> str:
+def get_age() -> str:
     return dumps({
-        'Gender': getStr('What is your gender?', 1, 20),
-        'First Pronoun': getStr('What is your first pronoun?', 1, 10),
-        'Second Pronoun': getStr('What is your second pronoun?', 1, 10),
+        'Age': get_int('How old are you?', 1, 100)
     })
 
-def name() -> str:
+def get_gender() -> str:
     return dumps({
-        'First Name': getStr('What is your first name?', 1, 50),
-        'Middle Name': getStr('What is your middle name?', 1, 50),
-        'Last Name': getStr('What is your last name?', 1, 50),
+        'Gender': get_str('What is your gender?', 1, 20),
+        'First Pronoun': get_str('What is your first pronoun?', 1, 10),
+        'Second Pronoun': get_str('What is your second pronoun?', 1, 10),
     })
 
-def format() -> str:
+def get_name() -> str:
     return dumps({
-        'Age Information': age(),
-        'Name Information': name(),
-        'Gender Information': gender(),
+        'First Name': get_str('What is your first name?', 1, 50),
+        'Middle Name': get_str('What is your middle name?', 1, 50),
+        'Last Name': get_str('What is your last name?', 1, 50),
+    })
+
+def format_user_info() -> str:
+    return dumps({
+        'Age Information': get_age(),
+        'Name Information': get_name(),
+        'Gender Information': get_gender(),
     })
 
 def get_user_info() -> None:
     with open('data/user_info.json', 'w') as f:
-        f.write(format())
+        f.write(format_user_info())
